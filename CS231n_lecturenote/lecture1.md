@@ -55,8 +55,6 @@ CISCO의 통계(2015~2017)에 따르면 인터넷 트래픽 중 80%가 비디오
 
 초창기의 카메라: 1600년대 르네상스 시대의 카메라 Obscura
 
-<img src="/img/lec1/camera-obscura.jpg" width="450px" height="300px" title="camera-obscura"></img>
-
 ```
 핀홀 카메라 이론에 기반
 생물학적으로 발전한 초기 눈과 상당히 유사.
