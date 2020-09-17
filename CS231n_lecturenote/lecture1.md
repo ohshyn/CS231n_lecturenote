@@ -21,7 +21,8 @@
 ## 컴퓨터비전의 역사
 1. 생물학적 비전의 역사: 진화의 빅뱅
 >- 생물의 종 수가 천만 년 사이에 폭발적으로 증가: 캄브리아기 대폭발
-![ex_sreenshot](./img/lec1/cambrian_explosion.jpg){: width="300" height="300"}
+
+![ex_sreenshot](./img/lec1/cambrian_explosion.jpg)
 >>- 앤드류 파커(Andrew Parker)의 이론
 >>>- 약 5억 4천만 년 전 최초의 눈(eyes)가 발생.
 >>>- 볼 수 있음으로 보다 능동적인 삶을 가지게 됨.
@@ -29,6 +30,7 @@
 
 2. 공학적 비전의 역사: 카메라
 >- 초창기의 카메라: 1600년대 르네상스 시대의 카메라 Obscura
+
 ![ex_sreenshot](./img/lec1/camera_obscura.jpg)
 >>- 핀홀 카메라 이론에 기반
 >>- 생물학적으로 발전한 초기 눈과 상당히 유사.
@@ -37,6 +39,7 @@
 >- 현재 카메라는 가장 보편적이고 강력한 센서.
 
 3. 모든 비전 연구에 영감을 준 연구: 1950/60년대 전기생리학을 이용한 Hubel과 Wiesel의 연구
+
 ![ex_sreenshot](./img/lec1/hubel_wiesel_cat.png)
 >- 연구 목표: 포유류의 시각적 처리 메커니즘은 무엇일까?
 >- 고양이 뇌의 일차 시각 피질에 전극을 꽂아 일차 시각 피질 뉴런이 반응하는 자극을 확인
@@ -44,10 +47,12 @@
 
 4. 컴퓨터 비전의 역사
 >- 1960s: 컴퓨터 비전의 태동, Block World
+
 ![ex_sreenshot](./img/lec1/larry roberts_block world.png)
 >>- 연구 목표: 기하학적으로 단순화한 사물들을 인식하고 그 모양을 재구성하는 일.
 
 >- 1966: MIT 여름 프로젝트, The Summer Vision Project
+
 ![ex_sreenshot](./img/lec1/the summer vision project.png)
 >>- 연구 목표: 시각 시스템의 전반을 구현하기 위해 프로젝트 참가자들을 효율적으로 이용하는 것.
 >>>- 1966년 여름 안에 대부분의 시각 체계를 구현하려는 야심찬 목표
@@ -56,11 +61,13 @@
 
 >- 1970s: 컴퓨터 비전의 많은 발전
 >>- David Marr의 VISION
+
 ![ex_sreenshot](./img/lec1/david marr_vision.jpg)
 >>>- 비전의 정의, 발전방향, 알고리즘 개발 방향을 다룬 책
 
 >>- Generalized Cylinder, Brooks & Binford(1979
 >>- Pictorial Structure, Finschler & Elschlager(1973)
+
 ![ex_sreenshot](./img/lec1/1970s_cv.png)
 >>>- 기본개념: 모든 객체는 단순한 기하학적 형태로 표현할 수 있다.
 
@@ -70,6 +77,7 @@
 >- 1990s: 객체인식이 어렵다면 객체 분할(segmentation)이 우선이 아니었을까?
 >>- 객체분할?: 이미지의 각 픽셀을 의미있는 방향으로 군집화하는 방법.
 >>>- 군집화하더라도 사람을 정확히 인식할 수 없을지 모르지만 적어도 배경과 사람을 가려낼 수는 있었음.
+
 ![ex_screenshot](./img/lec1/normlized cut.jpg)
 >>>- 영상분할 문제 해결을 위해 그래프 이론을 도입.
 
@@ -78,12 +86,14 @@
 >>>- SVM, Boosting, Graphcial models, Neural Network등이 있음.
 >>- 얼굴인식에 가장 큰 기여를 한 연구: AdaBoost를 이용한 실시간 얼굴인식(Viola & Jones, 2001)
 >>>- 컴퓨터가 엄청 느렸던 2001년에 실시간 얼굴인식을 성공시킨 엄청난 성과.
+
 ![ex_screenshot](./img/lec1/face detection.jpg)
 >>>- 5년 후에 Fujifilm은 실시간 얼굴인식을 지원하느 최초의 디지털카메라를 선보임.
 >>>- 이는 기초 과학 연구 성과를 실제 응용 제품에 가장 빠르게 전달한 사례.
 
 >- 2010s: 90년대 후반부터 시대를 풍미한 알고리즘, 특징기반 객체 인식 알고리즘
 >>- David Lowe의 SIFT feature
+
 ![ex_screenshot](./img/lec1/SIFT feature.jpg)
 >>>- 객체의 특징 중 일부는 다양한 변화에 강인하고 불변하다는 것을 발견.
 >>>- 객체에서 중요한 특징을 찾아내고 다른 객체에 매칭하여 객체를 인식할 수 있음. 전체 이미지를 매칭하는 것보다 훨씬 쉬운 일.
@@ -91,12 +101,14 @@
 >>- 이미지에 존재하는 특징을 사용하게 되면서 컴퓨터비전은 한단계 도약해 전체 장면을 인식하게됨.
 >>- Spatial Pyramid Matching
 >>>- 아이디어: 우리가 특징들을 잘 뽑아낼 수만 있다면, 그 특징들이 단서를 제공해 줄 것이다.
+
 ![ex_screenshot](./img/lec1/spatial pytramid matching.jpg)
 >>- 마찬가지로 사람 인식에도 큰 영향을 줌.
 >>- Histogram Of Gradients
 >>- Deformable Part Models
 
 >- 2012: ImageNet Challenge 우승 알고리즘, CNN 모델
+
 ![ex_screenshot](./img/lec1/image classification challenge.jpg)
 >>- 대회 첫 2년, 25%에 머물던 오류율을 16%로 약 10%가량 떻어트림.
 >>- 이번 강의의 주제.
