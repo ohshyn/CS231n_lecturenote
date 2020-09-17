@@ -31,7 +31,7 @@
 2. 공학적 비전의 역사: 카메라
 >- 초창기의 카메라: 1600년대 르네상스 시대의 카메라 Obscura
 
-![ex_screenshot](./img/lec1/camera_obscura.jpg)
+![ex_screenshot](./img/lec1/camera-obscura.jpg)
 >>- 핀홀 카메라 이론에 기반
 >>- 생물학적으로 발전한 초기 눈과 상당히 유사.
 >>>- 빛을 모아주는 구멍이 하나.
@@ -48,7 +48,7 @@
 4. 컴퓨터 비전의 역사
 >- 1960s: 컴퓨터 비전의 태동, Block World
 
-![ex_screenshot](./img/lec1/larry-roberts_block-world.png)
+![ex_screenshot](./img/lec1/larry-roberts-block-world.png)
 >>- 연구 목표: 기하학적으로 단순화한 사물들을 인식하고 그 모양을 재구성하는 일.
 
 >- 1966: MIT 여름 프로젝트, The Summer Vision Project
@@ -62,13 +62,13 @@
 >- 1970s: 컴퓨터 비전의 많은 발전
 >>- David Marr의 VISION
 
-![ex_screenshot](./img/lec1/david-marr_vision.jpg)
+![ex_screenshot](./img/lec1/david-marr-vision.jpg)
 >>>- 비전의 정의, 발전방향, 알고리즘 개발 방향을 다룬 책
 
 >>- Generalized Cylinder, Brooks & Binford(1979)
 >>- Pictorial Structure, Finschler & Elschlager(1973)
 
-![ex_screenshot](./img/lec1/1970s_cv.png)
+![ex_screenshot](./img/lec1/1970s-cv.png)
 >>>- 기본개념: 모든 객체는 단순한 기하학적 형태로 표현할 수 있다.
 
 >- 1980s: 단순한 구조로 실제 세계를 재구성/인식할 수 있을지 고민
@@ -78,7 +78,7 @@
 >>- 객체분할?: 이미지의 각 픽셀을 의미있는 방향으로 군집화하는 방법.
 >>>- 군집화하더라도 사람을 정확히 인식할 수 없을지 모르지만 적어도 배경과 사람을 가려낼 수는 있었음.
 
-![ex_screenshot](./img/lec1/normlized-cut.jpg)
+![ex_screenshot](./img/lec1/normalized-cut.jpg)
 >>>- 영상분할 문제 해결을 위해 그래프 이론을 도입.
 
 >- 2000s: 컴퓨터비전에서 유난히 발전 속도가 빨랐던 분야, 얼굴인식

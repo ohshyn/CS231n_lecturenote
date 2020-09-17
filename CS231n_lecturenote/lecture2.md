@@ -51,14 +51,14 @@ def classify_image(image):
 >>>- 확장성이 없다.
 
 - Data-Driven Approach: 이 세상에 존재하는 다양한 객체들에게 유연하게 적용 가능한 확장성 있는 알고리즘
-'''
+```
 def train(images, labels):
 	# Machine Learning!
 	return model
-'''
-'''
+```
+```
 def predict(model, test_images):
 	# Use model to predict labels
 	return test_labels
-'''
+```
 
