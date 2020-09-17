@@ -40,7 +40,7 @@
 
 3. 모든 비전 연구에 영감을 준 연구: 1950/60년대 전기생리학을 이용한 Hubel과 Wiesel의 연구
 
-![ex_sreenshot](./img/lec1/hubel_wiesel_cat.png)
+![ex_sreenshot](./img/lec1/hube_wiesel_cat.png)
 >- 연구 목표: 포유류의 시각적 처리 메커니즘은 무엇일까?
 >- 고양이 뇌의 일차 시각 피질에 전극을 꽂아 일차 시각 피질 뉴런이 반응하는 자극을 확인
 >- 주된 발견: 시각 처리가 처음에는 단순한 구조로 시작, 그 정보가 통로를 거치면서 점점 복잡해지며 실제 세상을 재대로 인지하게 됨.
@@ -65,7 +65,7 @@
 ![ex_sreenshot](./img/lec1/david marr_vision.jpg)
 >>>- 비전의 정의, 발전방향, 알고리즘 개발 방향을 다룬 책
 
->>- Generalized Cylinder, Brooks & Binford(1979
+>>- Generalized Cylinder, Brooks & Binford(1979)
 >>- Pictorial Structure, Finschler & Elschlager(1973)
 
 ![ex_sreenshot](./img/lec1/1970s_cv.png)
@@ -102,14 +102,14 @@
 >>- Spatial Pyramid Matching
 >>>- 아이디어: 우리가 특징들을 잘 뽑아낼 수만 있다면, 그 특징들이 단서를 제공해 줄 것이다.
 
-![ex_screenshot](./img/lec1/spatial pytramid matching.jpg)
+![ex_screenshot](./img/lec1/spatial pyramid matching.jpg)
 >>- 마찬가지로 사람 인식에도 큰 영향을 줌.
 >>- Histogram Of Gradients
 >>- Deformable Part Models
 
 >- 2012: ImageNet Challenge 우승 알고리즘, CNN 모델
 
-![ex_screenshot](./img/lec1/image classification challenge.jpg)
+![ex_screenshot](./img/lec1/imagenet challenge.jpg)
 >>- 대회 첫 2년, 25%에 머물던 오류율을 16%로 약 10%가량 떻어트림.
 >>- 이번 강의의 주제.
 >>>- CNN이 무엇인지
