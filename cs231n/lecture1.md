@@ -20,8 +20,8 @@
 
 ## 컴퓨터비전의 역사
 1. 생물학적 비전의 역사: 진화의 빅뱅
+![ex_sreenshot](./img/lec1/cambrian_explosion.jpg)
 >- 생물의 종 수가 천만 년 사이에 폭발적으로 증가: 캄브리아기 대폭발
->- ![ex_sreenshot](./img/lec1/cambrian_explosion.jpg)
 >>- 앤드류 파커(Andrew Parker)의 이론
 >>>- 약 5억 4천만 년 전 최초의 눈(eyes)가 발생.
 >>>- 볼 수 있음으로 보다 능동적인 삶을 가지게 됨.
