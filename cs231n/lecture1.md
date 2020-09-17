@@ -92,7 +92,6 @@
 >>- Spatial Pyramid Matching
 >>>- 아이디어: 우리가 특징들을 잘 뽑아낼 수만 있다면, 그 특징들이 단서를 제공해 줄 것이다.
 ![ex_screenshot](./img/lec1/spatial pytramid matching.jpg)
-
 >>- 마찬가지로 사람 인식에도 큰 영향을 줌.
 >>- Histogram Of Gradients
 >>- Deformable Part Models
