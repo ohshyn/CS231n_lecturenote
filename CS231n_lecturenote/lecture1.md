@@ -22,7 +22,7 @@
 1. 생물학적 비전의 역사: 진화의 빅뱅
 >- 생물의 종 수가 천만 년 사이에 폭발적으로 증가: 캄브리아기 대폭발
 
-![ex_sreenshot](./img/lec1/cambrian-explosion.jpg)
+![ex_screenshot](./img/lec1/cambrian-explosion.jpg)
 >>- 앤드류 파커(Andrew Parker)의 이론
 >>>- 약 5억 4천만 년 전 최초의 눈(eyes)가 발생.
 >>>- 볼 수 있음으로 보다 능동적인 삶을 가지게 됨.
@@ -31,7 +31,7 @@
 2. 공학적 비전의 역사: 카메라
 >- 초창기의 카메라: 1600년대 르네상스 시대의 카메라 Obscura
 
-![ex_sreenshot](./img/lec1/camera_obscura.jpg)
+![ex_screenshot](./img/lec1/camera_obscura.jpg)
 >>- 핀홀 카메라 이론에 기반
 >>- 생물학적으로 발전한 초기 눈과 상당히 유사.
 >>>- 빛을 모아주는 구멍이 하나.
@@ -40,7 +40,7 @@
 
 3. 모든 비전 연구에 영감을 준 연구: 1950/60년대 전기생리학을 이용한 Hubel과 Wiesel의 연구
 
-![ex_sreenshot](./img/lec1/hubel-wiesel-cat.png)
+![ex_screenshot](./img/lec1/hubel-wiesel-cat.png)
 >- 연구 목표: 포유류의 시각적 처리 메커니즘은 무엇일까?
 >- 고양이 뇌의 일차 시각 피질에 전극을 꽂아 일차 시각 피질 뉴런이 반응하는 자극을 확인
 >- 주된 발견: 시각 처리가 처음에는 단순한 구조로 시작, 그 정보가 통로를 거치면서 점점 복잡해지며 실제 세상을 재대로 인지하게 됨.
@@ -48,12 +48,12 @@
 4. 컴퓨터 비전의 역사
 >- 1960s: 컴퓨터 비전의 태동, Block World
 
-![ex_sreenshot](./img/lec1/larry-roberts_block-world.png)
+![ex_screenshot](./img/lec1/larry-roberts_block-world.png)
 >>- 연구 목표: 기하학적으로 단순화한 사물들을 인식하고 그 모양을 재구성하는 일.
 
 >- 1966: MIT 여름 프로젝트, The Summer Vision Project
 
-![ex_sreenshot](./img/lec1/the-summer-vision-project.png)
+![ex_screenshot](./img/lec1/the-summer-vision-project.png)
 >>- 연구 목표: 시각 시스템의 전반을 구현하기 위해 프로젝트 참가자들을 효율적으로 이용하는 것.
 >>>- 1966년 여름 안에 대부분의 시각 체계를 구현하려는 야심찬 목표
 >>- 그 후로 50여 년, 아직도 비전의 가장 근본적인 문제들을 전세계가 연구하고 있음.
@@ -62,13 +62,13 @@
 >- 1970s: 컴퓨터 비전의 많은 발전
 >>- David Marr의 VISION
 
-![ex_sreenshot](./img/lec1/david-marr_vision.jpg)
+![ex_screenshot](./img/lec1/david-marr_vision.jpg)
 >>>- 비전의 정의, 발전방향, 알고리즘 개발 방향을 다룬 책
 
 >>- Generalized Cylinder, Brooks & Binford(1979)
 >>- Pictorial Structure, Finschler & Elschlager(1973)
 
-![ex_sreenshot](./img/lec1/1970s_cv.png)
+![ex_screenshot](./img/lec1/1970s_cv.png)
 >>>- 기본개념: 모든 객체는 단순한 기하학적 형태로 표현할 수 있다.
 
 >- 1980s: 단순한 구조로 실제 세계를 재구성/인식할 수 있을지 고민
