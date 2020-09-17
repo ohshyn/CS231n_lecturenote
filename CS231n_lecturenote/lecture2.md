@@ -74,14 +74,14 @@ def predict(model, test_images):
 
 ### 1. First Classifier: Nearest Neighbor(NN)
 
-- 매우 간단하지만 Data-Driven Approach로 아주 좋은 알고리즘
+매우 간단하지만 Data-Driven Approach로 아주 좋은 알고리즘
 
 ```
 def train: 데이터와 라벨을 저장하는 것 외 아무 동작도 하지 않음.
 def predict: 입력과 가장 유사한 훈련 데이터를 찾아 그것의 라벨로 입력 데이터를 라벨링함.
 ```
 
-- 중요한 점: 이미지 쌍이 있을 때 어떻게 비교할 것인가? 어떤 비교 함수를 사용할 것인가?
+중요한 점: 이미지 쌍이 있을 때 어떻게 비교할 것인가? 어떤 비교 함수를 사용할 것인가?
 
 <img src="./img/lec2/l1-dist.png" width="450px" height="300px" title="l1-dist"></img>
 
@@ -91,13 +91,13 @@ A. Train O(1), Predict O(N).
 ... 뒤집어짐: 실제로 Train Time은 느려도 되지만 Test Time에서는 빠르게 동작하길 원한다.
 ```
 
-- NN의 일반화 모델: K-Nearest Neighbors
+NN의 일반화 모델: K-Nearest Neighbors
 
 ```
 단순히 가장 가까운 데이터 포인트를 복사하기 보다, K개의 가까운 데이터 포인트들의 다수결로 결정.
 ```
 
-- 거리 척도(distance metric)의 선택
+거리 척도(distance metric)의 선택
 
 ```
 서로 다른 척도에서는 공간의 근본적인 기하학 구조가 달라짐.
@@ -111,9 +111,9 @@ L1은 좌표 시스템에 따라 많은 영향을 받음.
 
 <img src="./img/lec2/knn-dist-metrics.png" width="450px" height="300px" title="knn-dist-metrics"></img>
 
-- 매우 간단하기에 새로운 문제를 접했을 때 시도해 볼만한 아주 좋은 알고리즘.
+매우 간단하기에 새로운 문제를 접했을 때 시도해 볼만한 아주 좋은 알고리즘.
 
-- 단, 입력이 이미지인 경우 k-NN 분류기를 잘 사용하지 않는다.
+단, 입력이 이미지인 경우 k-NN 분류기를 잘 사용하지 않는다.
 
 ```
 1. test time에서 너무나 느린 알고리즘.
