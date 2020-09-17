@@ -161,7 +161,7 @@ SVM, Boosting, Graphcial models, Neural Network등이 있음.
 ```
 아이디어: 우리가 특징들을 잘 뽑아낼 수만 있다면, 그 특징들이 단서를 제공해 줄 것이다.
 마찬가지로 사람 인식에도 큰 영향을 줌.
-ex. Histogram Of Gradients & Deformable Part Models
+e.g. Histogram Of Gradients & Deformable Part Models
 ```
 
 2012: ImageNet Challenge 우승 알고리즘, CNN 모델
