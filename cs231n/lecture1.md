@@ -27,7 +27,7 @@
 >- 현재 비전은 모든 동물, 특히 지능을 가진 동물들의 가장 큰 감각체계로 발전.
 
 2. 공학적 비전의 역사: 카메라
-![ex_sreenshot](./img/lec1/camera_obscura)
+![ex_sreenshot](./img/lec1/camera_obscura.jpg)
 >- 초창기의 카메라: 1600년대 르네상스 시대의 카메라 Obscura
 >>- 핀홀 카메라 이론에 기반
 >>- 생물학적으로 발전한 초기 눈과 상당히 유사.
