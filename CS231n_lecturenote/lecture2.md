@@ -35,11 +35,11 @@
 >>- 객체에 따라 생김새, 크기, 색, 나이가 각양 각색일 것이다.
 
 - An image classifier
-'''
+```
 def classify_image(image):
 	# Some magic here?
 	return class_label
-'''
+```
 >- 사물인식의 경우, 알고리즘 문제와 같이 직관적이고 명시적인 알고리즘은 존재하지 않는다.
 >- 막상 프로그램을 만들라고 하면 다들 벙쪄있을 것.
 >>- 지금까지 연구들은 사물을 인식하기위한 coded rules를 만들고자 시도해왔었다.
@@ -51,6 +51,11 @@ def classify_image(image):
 >>>- 확장성이 없다.
 
 - Data-Driven Approach: 이 세상에 존재하는 다양한 객체들에게 유연하게 적용 가능한 확장성 있는 알고리즘
+```
+1. 데이터셋(이미지, 라벨)을 만든다.
+2. 기계학습으로 classifier를 학습시킨다.
+3. 새로운 이미지들에 대해 classifier를 평가한다.
+```
 ```
 def train(images, labels):
 	# Machine Learning!
