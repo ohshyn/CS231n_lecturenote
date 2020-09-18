@@ -144,7 +144,7 @@ def L_i_vectorized(x, y, W):
 
 Hinge Loss: 직선이 접힌 형태의 그래프
 
-<img src="./img/lec3/hinge-loss.png" title="hinge-loss"></img>
+![hinge-loss](./img/lec3/hinge-loss.PNG)
 
 ```
 x축: S_Yi ... 실제 정답 클래스의 스코어
