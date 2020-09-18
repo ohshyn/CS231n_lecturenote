@@ -57,7 +57,7 @@ Multiclass SVM Loss 동작: L_i를 구하는 과정
 ... 우리의 분류기의 트레이닝셋을 분류 성능 지표 = 5.3 
 ```
 
-<img src="./img/lec3/multiclass-svm-loss-cat-score.jpg" width="450px" height="300px" title="multiclass-svm-loss-cat-score"></img>
+<img src="./img/lec3/multiclass-svm-loss-cat-score.png" width="450px" height="300px" title="multiclass-svm-loss-cat-score"></img>
 
 Multiclass SVM 동작의 이해를 위한 질문들
 
@@ -190,7 +190,7 @@ L2 regularization: W(모델)을 전체적으로 퍼트림.
 
 ### Softmax Classifier(Multinomial Logistic Regression)
 
-<img src="./img/lec3/softmax.jpg" width="450px" height="300px" title="softmax"></img>
+<img src="./img/lec3/softmax.png" width="450px" height="300px" title="softmax"></img>
 
 ```
 Multiclass SVM의 경우, 스코어 자체를 크게 신경쓰지 않는다. 단지 대소를 비교할 뿐 그 의미에 관심이 없음.
@@ -310,7 +310,7 @@ while True:
 
 ## 4. Aside: Image Features
 
-<img src="./img/lec3/image-feature.jpg" width="450px" height="300px" title="image-feature"></img>
+<img src="./img/lec3/image-feature.png" width="450px" height="300px" title="image-feature"></img>
 
 ```
 영상 자체를 입력으로 사용하는 것은 성능이 좋지 못하다.
@@ -329,7 +329,7 @@ Feature Representations: 특징 변환
 
 - 1. Color Histogram
 
-<img src="./img/lec3/color-hist.jpg" width="450px" height="300px" title="color-hist"></img>
+<img src="./img/lec3/color-hist.png" width="450px" height="300px" title="color-hist"></img>
 
 ```
 이미지의 픽셀이 해당하는 색의 양동이에 넣고, 각 양동이에 들어있는 픽셀의 개수를 세는 것.
@@ -338,7 +338,7 @@ Feature Representations: 특징 변환
 
 - 2. Histogram of Oriented Gradients: HoG
 
-<img src="./img/lec3/hog.jpg" width="450px" height="300px" title="hog"></img>
+<img src="./img/lec3/hog.png" width="450px" height="300px" title="hog"></img>
 
 ```
 NN이 뜨기전 인기있었던 또 다른 특징 벡터 중 하나.
