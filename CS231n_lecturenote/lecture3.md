@@ -190,7 +190,7 @@ L2 regularization: W(모델)을 전체적으로 퍼트림.
 
 ### Softmax Classifier(Multinomial Logistic Regression)
 
-<img src="./img/lec3/softmax.png" title="softmax"></img>
+![softmax](./img/lec3/softmax.PNG)
 
 ```
 Multiclass SVM의 경우, 스코어 자체를 크게 신경쓰지 않는다. 단지 대소를 비교할 뿐 그 의미에 관심이 없음.
