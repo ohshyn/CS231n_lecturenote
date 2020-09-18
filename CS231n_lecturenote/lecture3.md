@@ -26,7 +26,7 @@
 오직 정답 스코어와 그외 스코어와의 차이만 고려한다.
 ```
 
-<img src="./img/lec3/multiclass-svm-loss.png" title="multiclass-svm-loss"></img>
+![multiclass-svm-loss](./img/lec3/multiclass-svm-loss.PNG)
 
 Multiclass SVM Loss 동작: L_i를 구하는 과정
 
@@ -41,7 +41,8 @@ Multiclass SVM Loss 동작: L_i를 구하는 과정
 ... Multiclass SVM: 정답 스코어가 다른 스코어들 보다 높으면 좋다는 것.
 ```
 
-<img src="./img/lec3/multiclass-svm-loss-eg-cat.png" title="multiclass-svm-loss-eg-cat"></img>
+![multiclass-svm-loss](./img/lec3/multiclass-svm-loss.PNG)
+<img src="./img/lec3/multiclass-svm-loss-cat.png" title="multiclass-svm-loss-eg-cat"></img>
 
 ```
 1. 정답이 아닌 클래스를 순회.
