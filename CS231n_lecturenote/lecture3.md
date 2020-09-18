@@ -26,7 +26,7 @@
 오직 정답 스코어와 그외 스코어와의 차이만 고려한다.
 ```
 
-<img src="./img/lec3/multiclass-svm-loss.png" width="450px" height="300px" title="multiclass-svm-loss"></img>
+<img src="./img/lec3/multiclass-svm-loss.png" title="multiclass-svm-loss"></img>
 
 Multiclass SVM Loss 동작: L_i를 구하는 과정
 
@@ -41,7 +41,7 @@ Multiclass SVM Loss 동작: L_i를 구하는 과정
 ... Multiclass SVM: 정답 스코어가 다른 스코어들 보다 높으면 좋다는 것.
 ```
 
-<img src="./img/lec3/multiclass-svm-loss-eg-cat.png" width="450px" height="300px" title="multiclass-svm-loss-eg-cat"></img>
+<img src="./img/lec3/multiclass-svm-loss-eg-cat.png" title="multiclass-svm-loss-eg-cat"></img>
 
 ```
 1. 정답이 아닌 클래스를 순회.
@@ -57,7 +57,7 @@ Multiclass SVM Loss 동작: L_i를 구하는 과정
 ... 우리의 분류기의 트레이닝셋을 분류 성능 지표 = 5.3 
 ```
 
-<img src="./img/lec3/multiclass-svm-loss-cat-score.png" width="450px" height="300px" title="multiclass-svm-loss-cat-score"></img>
+<img src="./img/lec3/multiclass-svm-loss-cat-score.png" title="multiclass-svm-loss-cat-score"></img>
 
 Multiclass SVM 동작의 이해를 위한 질문들
 
@@ -144,7 +144,7 @@ def L_i_vectorized(x, y, W):
 
 Hinge Loss: 직선이 접힌 형태의 그래프
 
-<img src="./img/lec3/hinge-loss.png" width="450px" height="300px" title="hinge-loss"></img>
+<img src="./img/lec3/hinge-loss.png" title="hinge-loss"></img>
 
 ```
 x축: S_Yi ... 실제 정답 클래스의 스코어
@@ -156,7 +156,7 @@ y축: loss값
 
 ## 2. Regularization
 
-<img src="./img/lec3/regularization.png" width="450px" height="300px" title="regularization"></img>
+<img src="./img/lec3/regularization.png" title="regularization"></img>
 
 ```
 보통, 손실한수에 Regularization Term을 추가해준다.
@@ -168,7 +168,7 @@ Regularization: 모델이 데이터셋에 완벽히 핏하지 못하도록 모�
 람다: 두 항간의 트레이드오프.
 ```
 
-<img src="./img/lec3/regularizations.png" width="450px" height="300px" title="regularizations"></img>
+<img src="./img/lec3/regularizations.png" title="regularizations"></img>
 
 ```
 L2 regularization: 가중치 행렬 W에 대한 Euclidean norm(= squared norm) / 1/2*squared norm (보다 깔끔한 미분값)
@@ -190,7 +190,7 @@ L2 regularization: W(모델)을 전체적으로 퍼트림.
 
 ### Softmax Classifier(Multinomial Logistic Regression)
 
-<img src="./img/lec3/softmax.png" width="450px" height="300px" title="softmax"></img>
+<img src="./img/lec3/softmax.png" title="softmax"></img>
 
 ```
 Multiclass SVM의 경우, 스코어 자체를 크게 신경쓰지 않는다. 단지 대소를 비교할 뿐 그 의미에 관심이 없음.
@@ -233,7 +233,7 @@ Multiclass SVM 동작의 이해를 위한 질문들
 
 ### Softmax loss vs. SVM
 
-<img src="./img/lec3/softmax-vs-SVM.png" width="450px" height="300px" title="softmax-vs-SVM"></img>
+<img src="./img/lec3/softmax-vs-SVM.png" title="softmax-vs-SVM"></img>
 
 ```
 SVM loss는 오직 정답 스코어와 다른 클래스 스코어의 차이(마진)가 얼마나 되는지에만 관심이 있음.
@@ -246,7 +246,7 @@ SVM loss는 오직 정답 스코어와 다른 클래스 스코어의 차이(마�
 
 ### 정리: Supervised learning의 전반적인 개요
 
-<img src="./img/lec3/recap.png" width="450px" height="300px" title="recap"></img>
+<img src="./img/lec3/recap.png" title="recap"></img>
 
 ```
 - 데이터셋 x, y
@@ -310,7 +310,7 @@ while True:
 
 ## 4. Aside: Image Features
 
-<img src="./img/lec3/image-feature.png" width="450px" height="300px" title="image-feature"></img>
+<img src="./img/lec3/image-feature.png" title="image-feature"></img>
 
 ```
 영상 자체를 입력으로 사용하는 것은 성능이 좋지 못하다.
@@ -329,7 +329,7 @@ Feature Representations: 특징 변환
 
 - 1. Color Histogram
 
-<img src="./img/lec3/color-hist.png" width="450px" height="300px" title="color-hist"></img>
+<img src="./img/lec3/color-hist.png" title="color-hist"></img>
 
 ```
 이미지의 픽셀이 해당하는 색의 양동이에 넣고, 각 양동이에 들어있는 픽셀의 개수를 세는 것.
@@ -338,7 +338,7 @@ Feature Representations: 특징 변환
 
 - 2. Histogram of Oriented Gradients: HoG
 
-<img src="./img/lec3/hog.png" width="450px" height="300px" title="hog"></img>
+<img src="./img/lec3/hog.png" title="hog"></img>
 
 ```
 NN이 뜨기전 인기있었던 또 다른 특징 벡터 중 하나.
@@ -355,7 +355,7 @@ HOG는 영상인식에서 정말 많이 활용한 특징벡터.
 
 - 3. Bag of Words
 
-<img src="./img/lec3/bow.png" width="450px" height="300px" title="bow"></img>
+<img src="./img/lec3/bow.png" title="bow"></img>
 
 ```
 문단 내 단어의 발생빈도로 문단의 주제를 판단하는 NLP의 BOW를 착안, 이 직관을 그대로 이미지에 적용한 것.
@@ -367,7 +367,7 @@ BOW를 이미지에 적용하기위해 시각단어(visual words)라는 우리�
 
 ## 5. Image features vs ConvNets
 
-<img src="./img/lec3/image-features-vs-convnets.png" width="450px" height="300px" title="image-features-vs-convnets"></img>
+<img src="./img/lec3/image-features-vs-convnets.png" title="image-features-vs-convnets"></img>
 
 Image features
 

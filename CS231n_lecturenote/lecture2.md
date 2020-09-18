@@ -7,7 +7,7 @@
 이미지 분류?: 입력 이미지가 정해놓은 카테고리의 어디에 속하는지 고르는 일.
 ```
 
-<img src="./img/lec2/image-classification.jpg" width="450px" height="300px" title="image-classification"></img>
+<img src="./img/lec2/semantic-gap.png" title="semantic-gap"></img>
 
 ```
 고도화된 시각체계를 가진 인간에게는 쉽지만 기계에게는 정말 어려운 일.
@@ -74,6 +74,40 @@ def predict(model, test_images):
 
 ### 1. First Classifier: Nearest Neighbor(NN)
 
+```
+import numpy as np
+
+class NearestNeigbor:
+    def __init__(self):
+        pass
+    
+    def train(self, X, y):
+        # X: N*D, 각 행이 example
+        # Y: N*1
+        
+        # NN의 classifier는 단순히 모든 데이터들을 저장.
+        self.X_tr = X # 데이터
+        self.y_tr = y # 라벨
+        
+    def predict(self, X):
+        # X: N*D, 각행이 example ... 우리가 예측하려는 대상
+        
+        nums_test = X.shape[0]
+        
+        # 예측 결과 저장변수 초기화
+        Y_pred = np.zeros(num_test, dtype=self.y_tr.dtype)
+        
+        # 모든 row에 대해 확인
+        for i in xrange(num_test):
+            # i'th 테스트 이미지에 대해 가장 가까운 훈련 이미지를 찾자
+            # L1 dist 사용
+            dist = np.sum(np.abs(self.X_tr - X[i,:]), axis=1)
+            min_idx = np.argmin(distances) # 가장 작은 l1 dist를 가지는 idx 확보
+            Y_pred[i] = self.ytr[min_idx] # 가장 가까운 훈련데이터의 라벨로 예측
+        
+        return Y_pred
+```
+
 매우 간단하지만 Data-Driven Approach로 아주 좋은 알고리즘
 
 ```
@@ -83,7 +117,7 @@ def predict: 입력과 가장 유사한 훈련 데이터를 찾아 그것의 라
 
 중요한 점: 이미지 쌍이 있을 때 어떻게 비교할 것인가? 어떤 비교 함수를 사용할 것인가?
 
-<img src="./img/lec2/l1-dist.png" width="450px" height="300px" title="l1-dist"></img>
+<img src="./img/lec2/l1-dist.png" title="l1-dist"></img>
 
 ```
 Q. N개의 예제가 있을 때, training과 prediction의 시간복잡도는?
@@ -109,7 +143,7 @@ L1은 좌표 시스템에 따라 많은 영향을 받음.
 ... 거리 척도만 정해준다면 어떤 종류의 데이터도 다룰 수 있다는 것.
 ```
 
-<img src="./img/lec2/knn-dist-metrics.png" width="450px" height="300px" title="knn-dist-metrics"></img>
+<img src="./img/lec2/knn-dist-metrics.png" title="knn-dist-metrics"></img>
 
 매우 간단하기에 새로운 문제를 접했을 때 시도해 볼만한 아주 좋은 알고리즘.
 
@@ -165,7 +199,7 @@ idea #4: 크로스 밸리데이션(교차 검증)
 
 Parametric Approach
 
-<img src="./img/lec2/linear-classification.png" width="450px" height="300px" title="linear-classification"></img>
+<img src="./img/lec2/linear-classification.png" title="linear-classification"></img>
 
 ```
 트레이닝셋의 정보를 W에 요약.
@@ -187,7 +221,7 @@ Bias term(b)을 사용하기도 한다.
 
 Linear Classification의 동작: Template Matching
 
-<img src="./img/lec2/template-matching1.jpg" width="450px" height="300px" title="template-matching1"></img>
+<img src="./img/lec2/template-matching1.jpg" title="template-matching1"></img>
 
 ```
 입력 데이터 x: 4*1 벡터(픽셀)
@@ -200,7 +234,7 @@ W*x의 내적: 각 클래스 템플릿과 입력의 유사도 측정
 b: 각 클래스에 scailing offsets을 더해줌.
 ```
 
-<img src="./img/lec2/template-matching2.jpg" width="450px" height="300px" title="template-matching2"></img>
+<img src="./img/lec2/template-matching2.jpg" title="template-matching2"></img>
 
 ```
 Linear classifier의 각 클래스 템플릿이 하는 일을 짐작 가능.
