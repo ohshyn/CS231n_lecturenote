@@ -59,8 +59,6 @@ Multiclass SVM Loss 동작: L_i를 구하는 과정
 
 ![multiclass-svm-loss-cat-score](./img/lec3/multiclass-svm-loss-cat-score.PNG)
 
-<img src="./img/lec3/multiclass-svm-loss-cat-score.png" title="multiclass-svm-loss-cat-score"></img>
-
 Multiclass SVM 동작의 이해를 위한 질문들
 
 - Q1. Car 스코어가 조금 변하면 loss에는 무슨일이 일어날까?
