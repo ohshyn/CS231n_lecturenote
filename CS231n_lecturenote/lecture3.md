@@ -57,6 +57,8 @@ Multiclass SVM Loss 동작: L_i를 구하는 과정
 ... 우리의 분류기의 트레이닝셋을 분류 성능 지표 = 5.3 
 ```
 
+![multiclass-svm-loss-cat-score](./img/lec3/multiclass-svm-loss-cat-score.PNG)
+
 <img src="./img/lec3/multiclass-svm-loss-cat-score.png" title="multiclass-svm-loss-cat-score"></img>
 
 Multiclass SVM 동작의 이해를 위한 질문들
