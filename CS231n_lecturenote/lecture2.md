@@ -7,7 +7,7 @@
 이미지 분류?: 입력 이미지가 정해놓은 카테고리의 어디에 속하는지 고르는 일.
 ```
 
-<img src="./img/lec2/semantic-gap.png" title="semantic-gap"></img>
+![sementic-gap](./img/lec2/semantic-gap.png)
 
 ```
 고도화된 시각체계를 가진 인간에게는 쉽지만 기계에게는 정말 어려운 일.
