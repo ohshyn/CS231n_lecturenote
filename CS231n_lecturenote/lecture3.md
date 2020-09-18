@@ -168,7 +168,7 @@ Regularization: 모델이 데이터셋에 완벽히 핏하지 못하도록 모�
 람다: 두 항간의 트레이드오프.
 ```
 
-<img src="./img/lec3/regularizations.png" title="regularizations"></img>
+![regularizations](./img/lec3/regularizations.PNG)
 
 ```
 L2 regularization: 가중치 행렬 W에 대한 Euclidean norm(= squared norm) / 1/2*squared norm (보다 깔끔한 미분값)
