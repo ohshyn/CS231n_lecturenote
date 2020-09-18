@@ -233,7 +233,7 @@ Multiclass SVM 동작의 이해를 위한 질문들
 
 ### Softmax loss vs. SVM
 
-<img src="./img/lec3/softmax-vs-SVM.png" title="softmax-vs-SVM"></img>
+![softmax-vs-svm](./img/lec3/softmax-vs-svm.PNG)
 
 ```
 SVM loss는 오직 정답 스코어와 다른 클래스 스코어의 차이(마진)가 얼마나 되는지에만 관심이 있음.
@@ -246,8 +246,7 @@ SVM loss는 오직 정답 스코어와 다른 클래스 스코어의 차이(마�
 
 ### 정리: Supervised learning의 전반적인 개요
 
-<img src="./img/lec3/recap.png" title="recap"></img>
-
+![recap](./img/lec3/recap.PNG)
 ```
 - 데이터셋 x, y
 - 입력 x로부터 스코어를 얻기위해 Linear classifier를 사용.
