@@ -156,7 +156,7 @@ y축: loss값
 
 ## 2. Regularization
 
-<img src="./img/lec3/regularization.png" title="regularization"></img>
+![regularization](./img/lec3/regularization.PNG)
 
 ```
 보통, 손실한수에 Regularization Term을 추가해준다.
