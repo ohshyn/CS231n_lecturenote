@@ -40,7 +40,7 @@ CISCO의 통계(2015~2017)에 따르면 인터넷 트래픽 중 80%가 비디오
 
 생물의 종 수가 천만 년 사이에 폭발적으로 증가: 캄브리아기 대폭발
 
-<img src="./img/lec1/cambrian-explosion.jpg" width="450px" height="300px" title="cambrian-explosion"></img>
+![cambrian-explosion](./img/lec1/cambrian-explosion.PNG)
 
 앤드류 파커(Andrew Parker)의 이론
 
@@ -64,7 +64,7 @@ CISCO의 통계(2015~2017)에 따르면 인터넷 트래픽 중 80%가 비디오
 
 ### 3. 모든 비전 연구에 영감을 준 연구: 1950/60년대 전기생리학을 이용한 Hubel과 Wiesel의 연구
 
-<img src="./img/lec1/hubel-wiesel-cat.png" width="450px" height="300px" title="hubel-wiesel-cat"></img>
+![hubel-wiesel-cat](./img/lec1/hubel-wiesel-cat.PNG)
 
 ```
 연구 목표: 포유류의 시각적 처리 메커니즘은 무엇일까?
@@ -76,7 +76,7 @@ CISCO의 통계(2015~2017)에 따르면 인터넷 트래픽 중 80%가 비디오
 
 1960s: 컴퓨터 비전의 태동, Block World
 
-<img src="./img/lec1/larry-roberts-block-world.png" width="450px" height="300px" title="larry-roberts-block-world"></img>
+![larry-roberts-block-world](./img/lec1/larry-roberts-block-world.PNG)
 
 ```
 연구 목표: 기하학적으로 단순화한 사물들을 인식하고 그 모양을 재구성하는 일.
@@ -84,7 +84,7 @@ CISCO의 통계(2015~2017)에 따르면 인터넷 트래픽 중 80%가 비디오
 
 1966: MIT 여름 프로젝트, The Summer Vision Project
 
-<img src="./img/lec1/the-summer-vision-project.png" width="450px" height="300px" title="the-summer-vision-project"></img>
+![the-summer-vision-project](./img/lec1/the-summer-vision-project.PNG)
 
 ```
 연구 목표: 시각 시스템의 전반을 구현하기 위해 프로젝트 참가자들을 효율적으로 이용하는 것.
@@ -97,7 +97,7 @@ CISCO의 통계(2015~2017)에 따르면 인터넷 트래픽 중 80%가 비디오
 
 - David Marr의 VISION
 
-<img src="./img/lec1/david-marr-vision.jpg" width="450px" height="300px" title="david-marr-vision"></img>
+![david-marr-vision](./img/lec1/david-marr-vision.PNG)
 
 ```
 비전의 정의, 발전방향, 알고리즘 개발 방향을 다룬 책
@@ -106,7 +106,7 @@ CISCO의 통계(2015~2017)에 따르면 인터넷 트래픽 중 80%가 비디오
 
 - Generalized Cylinder, Brooks & Binford(1979) / Pictorial Structure, Finschler & Elschlager(1973)
 
-<img src="./img/lec1/1970s-cv.png" width="450px" height="300px" title="1970s-cv"></img>
+![1970s-cv](./img/lec1/1970s-cv.PNG)
 
 ```
 기본개념: 모든 객체는 단순한 기하학적 형태로 표현할 수 있다.
@@ -118,7 +118,7 @@ CISCO의 통계(2015~2017)에 따르면 인터넷 트래픽 중 80%가 비디오
 
 1990s: 객체인식이 어렵다면 객체 분할(segmentation)이 우선이 아니었을까?
 
-<img src="./img/lec1/normalized-cut.jpg" width="450px" height="300px" title="normalized-cut"></img>
+![normalized-cut](./img/lec1/normalized-cut.PNG)
 
 ```
 객체분할?: 이미지의 각 픽셀을 의미있는 방향으로 군집화하는 방법.
@@ -135,7 +135,7 @@ SVM, Boosting, Graphcial models, Neural Network등이 있음.
 
 - 얼굴인식에 가장 큰 기여를 한 연구: AdaBoost를 이용한 실시간 얼굴인식(Viola & Jones, 2001)
 
-<img src="./img/lec1/face-detection.jpg" width="450px" height="300px" title="face-detection"></img>
+![face-detection](./img/lec1/face-detection.PNG)
 
 ```
 컴퓨터가 엄청 느렸던 2001년에 실시간 얼굴인식을 성공시킨 엄청난 성과.
@@ -147,7 +147,7 @@ SVM, Boosting, Graphcial models, Neural Network등이 있음.
 
 - David Lowe의 SIFT feature
 
-<img src="./img/lec1/SIFT-feature.jpg" width="450px" height="300px" title="SIFT-feature"></img>
+![sift-feature](./img/lec1/sift-feature.PNG)
 
 ```
 객체의 특징 중 일부는 다양한 변화에 강인하고 불변하다는 것을 발견.
@@ -156,7 +156,7 @@ SVM, Boosting, Graphcial models, Neural Network등이 있음.
 
 - 특징을 사용하면서 컴퓨터비전은 한단계 도약해 전체 장면을 인식하게됨: Spatial Pyramid Matching
 
-<img src="./img/lec1/spatial-pyramid-matching.jpg" width="450px" height="300px" title="spatial-pyramid-matching"></img>
+![spatial-pyramid-matching](./img/lec1/spatial-pyramid-matching.PNG)
 
 ```
 아이디어: 우리가 특징들을 잘 뽑아낼 수만 있다면, 그 특징들이 단서를 제공해 줄 것이다.
@@ -166,7 +166,7 @@ e.g. Histogram Of Gradients & Deformable Part Models
 
 2012: ImageNet Challenge 우승 알고리즘, CNN 모델
 
-<img src="./img/lec1/imagenet-challenge.jpg" width="450px" height="300px" title="imagenet-challenge"></img>
+![imagenet-challenge](./img/lec1/imagenet-challenge.PNG)
 
 ```
 대회 첫 2년, 25%에 머물던 오류율을 16%로 약 10%가량 떨어트림.
