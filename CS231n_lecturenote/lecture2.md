@@ -117,7 +117,7 @@ def predict: 입력과 가장 유사한 훈련 데이터를 찾아 그것의 라
 
 중요한 점: 이미지 쌍이 있을 때 어떻게 비교할 것인가? 어떤 비교 함수를 사용할 것인가?
 
-<img src="./img/lec2/l1-dist.png" title="l1-dist"></img>
+![l1-dist](./img/lec2/l1-dist.PNG)
 
 ```
 Q. N개의 예제가 있을 때, training과 prediction의 시간복잡도는?
@@ -143,7 +143,7 @@ L1은 좌표 시스템에 따라 많은 영향을 받음.
 ... 거리 척도만 정해준다면 어떤 종류의 데이터도 다룰 수 있다는 것.
 ```
 
-<img src="./img/lec2/knn-dist-metrics.png" title="knn-dist-metrics"></img>
+![knn](./img/lec2/knn.PNG)
 
 매우 간단하기에 새로운 문제를 접했을 때 시도해 볼만한 아주 좋은 알고리즘.
 
@@ -199,7 +199,7 @@ idea #4: 크로스 밸리데이션(교차 검증)
 
 Parametric Approach
 
-<img src="./img/lec2/linear-classification.png" title="linear-classification"></img>
+![linear-classifier](./img/lec2/linear-classifier.PNG)
 
 ```
 트레이닝셋의 정보를 W에 요약.
@@ -221,7 +221,7 @@ Bias term(b)을 사용하기도 한다.
 
 Linear Classification의 동작: Template Matching
 
-<img src="./img/lec2/template-matching1.jpg" title="template-matching1"></img>
+![template-matching1](./img/lec2/template-matching1.PNG)
 
 ```
 입력 데이터 x: 4*1 벡터(픽셀)
@@ -234,7 +234,7 @@ W*x의 내적: 각 클래스 템플릿과 입력의 유사도 측정
 b: 각 클래스에 scailing offsets을 더해줌.
 ```
 
-<img src="./img/lec2/template-matching2.jpg" title="template-matching2"></img>
+![template-matching2](./img/lec2/template-matching2.PNG)
 
 ```
 Linear classifier의 각 클래스 템플릿이 하는 일을 짐작 가능.
