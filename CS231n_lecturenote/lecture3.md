@@ -247,6 +247,7 @@ SVM loss는 오직 정답 스코어와 다른 클래스 스코어의 차이(마�
 ### 정리: Supervised learning의 전반적인 개요
 
 ![recap](./img/lec3/recap.PNG)
+
 ```
 - 데이터셋 x, y
 - 입력 x로부터 스코어를 얻기위해 Linear classifier를 사용.
@@ -309,7 +310,7 @@ while True:
 
 ## 4. Aside: Image Features
 
-<img src="./img/lec3/image-feature.png" title="image-feature"></img>
+![image-features](./img/lec3/image-features.PNG)
 
 ```
 영상 자체를 입력으로 사용하는 것은 성능이 좋지 못하다.
@@ -328,7 +329,7 @@ Feature Representations: 특징 변환
 
 - 1. Color Histogram
 
-<img src="./img/lec3/color-hist.png" title="color-hist"></img>
+![color-hist](./img/lec3/color-hist.PNG)
 
 ```
 이미지의 픽셀이 해당하는 색의 양동이에 넣고, 각 양동이에 들어있는 픽셀의 개수를 세는 것.
@@ -337,7 +338,7 @@ Feature Representations: 특징 변환
 
 - 2. Histogram of Oriented Gradients: HoG
 
-<img src="./img/lec3/hog.png" title="hog"></img>
+![hog](./img/lec3/hog.PNG)
 
 ```
 NN이 뜨기전 인기있었던 또 다른 특징 벡터 중 하나.
@@ -354,7 +355,7 @@ HOG는 영상인식에서 정말 많이 활용한 특징벡터.
 
 - 3. Bag of Words
 
-<img src="./img/lec3/bow.png" title="bow"></img>
+![bow](./img/lec3/bow.PNG)
 
 ```
 문단 내 단어의 발생빈도로 문단의 주제를 판단하는 NLP의 BOW를 착안, 이 직관을 그대로 이미지에 적용한 것.
@@ -366,7 +367,7 @@ BOW를 이미지에 적용하기위해 시각단어(visual words)라는 우리�
 
 ## 5. Image features vs ConvNets
 
-<img src="./img/lec3/image-features-vs-convnets.png" title="image-features-vs-convnets"></img>
+![image-features-vs-convnets](./img/lec3/image-features-vs-convnets.PNG)
 
 Image features
 
