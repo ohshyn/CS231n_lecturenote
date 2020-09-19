@@ -221,3 +221,13 @@ CNN의 마지막 layer.
 ... 첫번째 열은 각 자리의 edges들이 얼마나 존재하는가를 의미.
 ... 두번째 열은 (edge보다 복잡한) corner 같은 것이 얼마나 존재하는가를 의미.
 ```
+
+# Summary
+
+![summary](./img/lec5/summary.PNG)
+
+```
+CNN 아키텍처 트렌드.
+... 작은 filter & 깊은 network
+... Pool/FC layer를 없애고 최대한 Conv layer만 쓰려는 추세.
+```
