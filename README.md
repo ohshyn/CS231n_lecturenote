@@ -7,3 +7,6 @@
 ---
 ## 2019.09.18
 - lecture3. Loss Functions and Optimization
+---
+## 2019.09.19
+- lecture4. Backpropagation and Nueral Networks
