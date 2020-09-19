@@ -10,3 +10,4 @@
 ---
 ## 2019.09.19
 - lecture4. Backpropagation and Nueral Networks
+- lecture5. Convolutional Neural Networks

@@ -125,7 +125,7 @@ W2는 h(사물 이미지에 대한 스코어)와 연결되어 있기에 예측�
 
 ```
 자극을 전달하는 형태를 activation function(비선형 함수)를 통해 표현.
-그리고 그중 RELU가 실제 뉴런과 가장 유사한 형태로 동작함.
+그리고 그중 ReLU가 실제 뉴런과 가장 유사한 형태로 동작함.
 ```
 
 ![dnn-example](./img/lec4/dnn-example.PNG)
