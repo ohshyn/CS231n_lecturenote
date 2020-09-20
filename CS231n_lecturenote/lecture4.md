@@ -1,4 +1,4 @@
-# lectureN. Backpropagation and Neural Networks
+﻿# lecture 4. Backpropagation and Neural Networks
 
 ## 1. Backpropagation
 

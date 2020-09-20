@@ -1,4 +1,4 @@
-# lecture3. Loss Functions and Optimization
+﻿# lecture 3. Loss Functions and Optimization
 
 ## 학습목표
 

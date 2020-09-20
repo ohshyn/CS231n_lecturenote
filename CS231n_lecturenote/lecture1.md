@@ -1,4 +1,4 @@
-# lecture1. Introduction to Convolutional Nueral Net
+﻿# lecture 1. Introduction to Convolutional Nueral Net
 
 ## 학습목표
 

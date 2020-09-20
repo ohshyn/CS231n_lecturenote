@@ -1,4 +1,4 @@
-# lecture5. Convolutional Neural Networks
+﻿# lecture 5. Convolutional Neural Networks
 
 ![cnn](./img/lec5/cnn.PNG)
 

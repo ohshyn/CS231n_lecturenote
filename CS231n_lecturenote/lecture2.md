@@ -1,4 +1,4 @@
-# lecture2. Image Classfication
+﻿# lecture 2. Image Classfication
 
 ## Image Classification
 
