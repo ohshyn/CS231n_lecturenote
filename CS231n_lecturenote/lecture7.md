@@ -130,6 +130,7 @@ Momentum 계열 vs. Grad 계열.
 
 AdaGrad vs. RMSProp.
 ... AdaGrad는 일반적으로 사용되지 않음.
+```
 
 - Adam
 
