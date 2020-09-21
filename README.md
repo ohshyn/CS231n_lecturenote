@@ -14,3 +14,6 @@
 ---
 ## 2019.09.20
 - lecture 6. Training Neural Networks 1
+---
+## 2019.09.21
+- lecture 7. Training Neural Networks 2
