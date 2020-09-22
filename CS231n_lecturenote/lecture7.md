@@ -258,3 +258,199 @@ Polyak averaging.
 
 ## Regularization
 
+```
+앙상블이 아닌 단일 모델의 성능을 향상시키기 위한 방법.
+... 앙상블은 10개의 모델을 돌려야한다. 그렇게 좋은 방법이 아님.
+... 단일 모델의 성능을 높이기 위한 방법이 바로 Regularization.
+
+Regularization: 모델이 트레이닝셋에 fit하는 것을 막아줌 ... 일반화하여 unseen 데이터에 보다 잘 동작함.
+```
+
+![regularization1](./img/lect7/regularization2.PNG)
+
+```
+손실함수: 기존항 + Regularization term.
+... 기존항: 스코어를 계산하여 gradient의 - 방향으로 업데이트할 때 트레이닝셋에 fit하게됨.
+... Regularization term: 파라미터 W에 대한 함수로 Loss값을 높여 트레이닝셋에 fit하는 것을 방해함.
+... L2 Regularization: 계산량이 많아 DNN에서 잘 활용되지 않음.
+```
+
+### Dropout
+
+![regularization2](./img/lect7/regularization2.PNG)
+
+```
+Dropout: forward pass 과정에서 한 layer씩 임의로 일부 뉴런을 0으로 만듬.
+... NN에서 가장 많이 사용되는 Regularization.
+... forward pass 마다 0이 되는 뉴런이 바뀜 ... forward pass iteration 마다 그 모양이 계속 바뀜.
+
+0으로 설정하는 값: activation.
+... 각 레이어에서 next activ = prev activ * weight
+... 현재 activations의 일부를 0으로 만들면 다음 layer의 일부는 0과 곱해짐.
+
+FC layer에서 흔히 사용됨.
+... Conv layer의 경우 전체 feature map에서 dropout을 시행.
+... 또, Conv layer에는 여러 체널이 있기에 일부 체널을 자체를 dropout할 수도 있음.
+```
+
+![regularization3](./img/lect7/regularization3.PNG)
+
+```
+일부 값을 0으로 만들며 Training time의 네트워크를 심각하게 훼손하는 Dropout이 어떻게 성능을 향상시킬까?
+... 특징들 간의 상호작용(co-adaptation)을 방지한다!
+
+위 네트워크는 고양이를 분류하는 역할을 수행.
+각 뉴런마다 고양이 신체의 일부(눈, 꼬리, 털)에 대해 학습한다.
+이 모든 정보들을 취합한 cat score로 고양이 여부를 판단한다.
+여기서 Dropout을 적용하게 되면 네트워크가 어떤 일부 feature들에만 의존하지 못하게 만든다.
+... 고양이를 판단하기 위해 다양한 feature들을 활용하게 됨.
+... 일부 데이터에 overfit하는 것을 방지하는 효과.
+```
+
+![regularization4](./img/lect7/regularization4.PNG)
+
+```
+Dropout 효과에 대한 새로운 해석: 단일 모델로 앙상블 효과.
+... 일부 뉴런만 사용하는 서브네트워크.
+... Dropout으로 만들 수 있는 서브네트워크의 경우는 정말 다양하다.
+... 따라서 Dropout은 서로 파라미터를 공유하는 서브네트워크 앙상블을 동시에 학습시키는 것.
+
+다만 뉴런의 수에 따라 앙상블 가능한 서브네트워크 수가 기하급수적으로 증가.
+... 가능한 모든 서브네트워크를 사용하는것은 사실상 불가능.
+... Dropout은 아주 거대한 앙상블 모델을 동시에 학습시키는 것.
+```
+
+![regularization5](./img/lect7/regularization5.PNG)
+
+```
+Test time의 Dropout
+
+Dropout을 사용하면 기본적으로 NN의 동작 자체가 변함.
+... 기존의 NN: f(x) = Wx
+... Dropout 사용 시: Network에 입력에 z, random dropout mask가 추가.
+... z: random ... 하지만 Test time에 임의읨 값을 부여하는 것은 좋지 못함.
+
+가령, 오늘은 고양이로 분류한 사진이 내일 개로 분류된다면 곤란하다.
+... 이렇게 Test time의 임의성(stochasticity)는 적절하지 못함.
+... 대신 그 임의성(randomness)을 average out: z를 여러번 샘플링하여 Test time에서 이를 average out.
+... 하지만 이 또한 Test time에 randomness를 만들어 내기 때문에 좋지 않은 방법.
+```
+
+![regularization6](./img/lect7/regularization6.PNG)
+
+```
+위의 네트워크의 Test time에서 a = W_1*x + W_2*y.
+이 네트워크에서 Dropout(p = 0.5)를 적용해 Train하면 dropout mask에는 4가지의 경우가 존재.
+... 이제 4개의 마스크에 대해 평균화를 수행.
+... 여기서 Train/Test time 간의 기댓값이 서로 상이함 ... Train time의 기댓값 = Test time의 기댓값/2.
+... Test time에서 stochasticity를 사용하지 않고 할 수 있는 값 싼 방법: Dropout probability를 네트워크 출력에 곱해줌.
+```
+
+![regularization7](./img/lect7/regularization7.PNG)
+
+```
+실제 구현에서는 최대한 Test time을 줄이기 위해 Train time에서 /p를 수행함.
+... Train은 보통 GPU로하기에 *, / 연산에 강함.
+... Train은 곱셈이 몇번 추가되는 것을 신경쓰지 않아도 됨.
+```
+
+- 일반적인 Regularization 전략
+
+![regularization8](./img/lect7/regularization8.PNG)
+
+```
+일반적인 Regularization 전략.
+... Train time: 네트워크에 무작위성(randomness)을 추가: 트레이닝셋에 너무 fit하지 않게 함.
+... Test time: randomness를 평균화 시켜 generalization 효과를 줌.
+
+Dropout vs BN.
+BN: Dropout과 유사한 Regularization 성능.
+... 미니배치로 하나의 데이터가 샘플링 될때 마다 서로 다른 데이터들과 만나 정규화: Train time의 randomness.
+... 하지만 Test time에서는 미니배치가 아닌 Global 단위로 정규화를 수행: Test time의 randomness 평균화.
+
+실제로 BN 사용 시 Dropout을 사용하지 않음: BN만으로 충분한 Regularization효과.
+하지만 Dropout에는 자유롭게 조절 가능한 파라미터 p가 있어 여전히 쓸모있음.
+```
+
+### Data augmentation
+
+![regularization9](./img/lect7/regularization9.PNG)
+
+```
+Data augmentation: 어떤 문제에도 적용해 볼 수 있는 아주 일반적인 방법.
+... 이미지의 label을 바꾸지 않으면서 이미지를 변환시킬 수 있는 많은 방법들이 있다: translation, rotation, stretching, shearing, lens distortions, ...
+... Train time에는 stochasticity가 추가, Test time: marginalize out.
+```
+
+### 그외의 Regualrization
+
+![regularization10](./img/lect7/regularization10.PNG)
+
+```
+Dropout, Batch Normalization, Data Augmentation.
+
+DropConnect: Dropout과 유사, activation이 아닌 Weight matrix를 임의적으로 0으로 만듦.
+
+Fractional max pooling: Pooling연산 수행 지역을 임의로 선정, 이후 Test time에서는 Pooling region을 고정 혹은 여러개를 만들어 averaging out.
+
+Stochastic Depth: Train time에 layer 중 일부만 사용해서 학습, Test time에는 전체 네트워크를 다 사용.
+```
+
+### Q & A
+
+```
+Q. Dropout이 Train time의 gradient에 어떤 영향을 주는가?
+A. Dropout이 0으로 만들지 않은 노드에서만 Backprop이 발생.
+... 따라서 Dropout을 사용하면 전체 학습기간이 늘어남: 각 스텝에서 업데이트되는 파라미터 수가 줄기 때문.
+... 전체 학습시간은 늘어나지만 모델이 수렴한 후 더 좋은 일반화 능력을 얻음.
+```
+
+```
+Q. 보통 하나 이상의 Regularization 방법을 사용하는가?
+A. 일반적으로 BN을 많이 사용. 대부분의 Network에서 잘 동작하고 아주 깊은 네트워크에서도 수렴을 잘 하도록 도와줌.
+... 대게는 BN만으로 충분하지만 Overfitting이 발생한다 싶으면 Dropout과 같은 방법을 추가해 볼 수 있음.
+... 이를 가지고 blind cross-validation을 수행하지는 않음.
+... 대신 네트워크에 Overfit 조짐이 보이면 하나씩 추가시켜 봄.
+```
+
+## Transfer Learning
+
+```
+Overfitting이 발생하는 주된 원인 중 하나가 작은 트레이닝셋의 크기.
+이런 Overfitting을 방지하기 위한 방법에 Regularization 외에도 Transfer learning이 있다.
+
+'CNN 학습에 엄청난 데이턱 필요하다.'는 미신을 무너뜨림.
+```
+
+![transfer-learning1](./img/lect7/transfer-learning1.PNG)
+![transfer-learning2](./img/lect7/transfer-learning2.PNG)
+
+```
+Transfer learning 시나리오.
+... 기존의 데이터와 유사, 데이터양이 극소: 마지막 layer(Linear Classifier)만 학습.
+... 기존의 데이터와 유사, 데이터양이 꽤 됨: 모델 전체를 fine tunning.
+... 기존의 데이터와 다름: 좀 더 창의적, 경험적인 방법이 필요 ... 데이터셋이 크면: 더 많은 layer를 fine tunning하면서 완화할 수 있음.
+```
+
+![transfer-learning3](./img/lect7/transfer-learning3.PNG)
+
+```
+요즘 거의 모든 Computer vision 관련 응용 알고리즘들이 모델들을 밑바닥부터(from scratch) 학습시키지 않음.
+... 대부분 imagenet pretrained-model을 사용하여 본인의 task에 맞도록 fine tunning.
+... captioning의 경우 word vectors를 pretrain하기도 함.
+```
+
+![transfer-learning4](./img/lect7/transfer-learning4.PNG)
+
+```
+문제에 대한 데이터셋이 크지 않은 경우,
+1. 유사한 데이터셋으로 학습된 pretrained model을 다운.
+2. 모델의 일부를 초기화 시키고 문제의 데이터셋으로 fine tunning.
+
+대부분의 딥러닝 소프트웨어 패키지가 model zoo를 제공.
+... 다양한 모델들의 pretrained 버전을 손쉽게 다운로드.
+```
+
+## Summary
+
+![summary](./img/lect7/summary.PNG)
