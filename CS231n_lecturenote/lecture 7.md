@@ -10,7 +10,7 @@
 
 ## Fancier optimization
 
-![optimization1](./img/lect7/optimization1.PNG)
+![optimization1](./img/lect 7/optimization1.PNG)
 
 ```
 Neural Net에서 가장 중요한 것은 결국 Optimization.
@@ -28,7 +28,7 @@ Neural Net에서 가장 중요한 것은 결국 Optimization.
 그리고 gradient의 반대 방향을 이용해서 파라미터 벡터를 업데이트.
 ```
 
-![optimization2](./img/lect7/optimization1.PNG)
+![optimization2](./img/lect 7/optimization1.PNG)
 
 ```
 SGD의 문제점 1: 불균형한 손실함수에서 느린 업데이트.
@@ -37,7 +37,7 @@ SGD의 문제점 1: 불균형한 손실함수에서 느린 업데이트.
 ... 고차원의 손실함수에서 더욱 빈번하게 발생.
 ```
 
-![optimization3](./img/lect7/optimization3.PNG)
+![optimization3](./img/lect 7/optimization3.PNG)
 
 ```
 SGD의 문제점 2: local minima & saddle point에서 학습을 끝냄.
@@ -49,7 +49,7 @@ SGD의 문제점 2: local minima & saddle point에서 학습을 끝냄.
 ... saddle point 근처의 gradient는 0에 근사하기에 학습이 느리게 진행됨 ... saddle point에 빠질 확률이 커짐.
 ```
 
-![optimization4](./img/lect7/optimization4.PNG)
+![optimization4](./img/lect 7/optimization4.PNG)
 
 ```
 SGD의 문제점 3: gradient의 추청치를 사용하기에 noisy할 수 있다.
@@ -58,7 +58,7 @@ SGD의 문제점 3: gradient의 추청치를 사용하기에 noisy할 수 있다
 
 - SGD + Momentum
 
-![optimization5](./img/lect7/optimization5.PNG)
+![optimization5](./img/lect 7/optimization5.PNG)
 
 ```
 단순히 velocity를 유지하여서 SGD의 모든 문제를 해결.
@@ -68,11 +68,11 @@ gradient를 계산할 때 velocity를 이용.
 gradient의 반대방향이 아닌 velocity의 방향으로 W가 업데이트됨.
 ```
 
-![optimization6](./img/lect7/optimization6.PNG)
+![optimization6](./img/lect 7/optimization6.PNG)
 
 - Nesterov Momentum
 
-![optimization7](./img/lect7/optimization7.PNG)
+![optimization7](./img/lect 7/optimization7.PNG)
 
 ```
 SGD Momentum: 가중평균(gradient, velocity)로 실제 가중치를 업데이트.
@@ -81,7 +81,7 @@ Nesterov Momentum: 벡터합(velocity, gradient)으로 실제 가중치를 업�
 ... velocity의 방향이 잘못됐을 경우 현재 gradient의 방향을 좀더 활용할 수 있도록 개선한 것.
 ```
 
-![optimization8](./img/lect7/optimization8.PNG)
+![optimization8](./img/lect 7/optimization8.PNG)
 
 ```
 Nesterov Momentum 계산 변형식.
@@ -99,7 +99,7 @@ A. 그럴 수 있다. 하지만 그것이 Momentum의 장점이다.
 
 - AdaGrad
 
-![optimization9](./img/lect7/optimization9.PNG)
+![optimization9](./img/lect 7/optimization9.PNG)
 
 ```
 AdaGrad: 훈련도중 계산되는 gradient를 활용하는 방법.
@@ -115,14 +115,14 @@ AdaGrad의 문제점: 학습횟수가 많아지면 AdaGrad가 계속 작아짐.
 
 - RMSProp
 
-![optimization10](./img/lect7/optimization10.PNG)
+![optimization10](./img/lect 7/optimization10.PNG)
 
 ```
 RMSProp: step size를 그저 누적하지 않고 (1-decay_rate)를 곱하여 AdaGrad의 문제점을 개선.
 ... decay_rate(보통 0.9 ~ 0.99): step의 속도를 가속/감속.
 ```
 
-![optimization11](./img/lect7/optimization11.PNG)
+![optimization11](./img/lect 7/optimization11.PNG)
 
 ```
 Momentum 계열 vs. Grad 계열.
@@ -134,7 +134,7 @@ AdaGrad vs. RMSProp.
 
 - Adam
 
-![optimization12](./img/lect7/optimization12.PNG)
+![optimization12](./img/lect 7/optimization12.PNG)
 
 ```
 Adam: Momentum + RMSProp.
@@ -153,7 +153,7 @@ Optimization 알고리즘들의 문제점: 회전된 차원은 해결할 수 없
 
 - Learning_rate decay
 
-![optimization13](./img/lect7/optimization13.PNG)
+![optimization13](./img/lect 7/optimization13.PNG)
 
 ```
 Learning_rate: Optimization을 사용하기 위해 반드시 설정해야하는 값.
@@ -174,15 +174,16 @@ Leaning_rate decay 설정 순서.
 
 - Second-Order Optimization
 
-![optimization14](./img/lect7/optimization14.PNG)
+![optimization14](./img/lect 7/optimization14.PNG)
 
 ```
 지금까지의 Optimization은 전부 First-order(1차미분).
 Second-Order를 사용하면 보다 효과적이다.
 ```
 
-![optimization15](./img/lect7/optimization15.PNG)
-![optimization16](./img/lect7/optimization16.PNG)
+![optimization15](./img/lect 7/optimization15.PNG)
+
+![optimization16](./img/lect 7/optimization16.PNG)
 
 ```
 기초적인 Second-order Optimization은 learning_rate가 없지만 실제로는 필요하다.
@@ -193,7 +194,7 @@ Second-Order를 사용하면 보다 효과적이다.
 ... 역행렬을 계산할 방법이 없다.
 ```
 
-![optimization17](./img/lect7/optimization17.PNG)
+![optimization17](./img/lect 7/optimization17.PNG)
 
 ```
 그래서 실제로는 quasi-Newton methods를 이용.
@@ -204,7 +205,7 @@ L-BFGS 또한 Hessian을 근사하는 방법.
 ... 2차근사가 stochastic case에서 잘 동작하지 않기 때문.
 ```
 
-![optimization18](./img/lect7/optimization18.PNG)
+![optimization18](./img/lect 7/optimization18.PNG)
 
 ```
 실제로는 Adam을 가장 많이 사용.
@@ -213,7 +214,7 @@ L-BFGS 또한 Hessian을 근사하는 방법.
 ... full batch update가 가능: stochastic case가 아닐 때.
 ```
 
-![optimization19](./img/lect7/optimization19.PNG)
+![optimization19](./img/lect 7/optimization19.PNG)
 
 ```
 Optimization을 잘 하여 Training error를 줄였다.
@@ -235,7 +236,7 @@ ML 분야에서 종종 사용되는 기법.
 
 - 창의적인 앙상블
 
-![ensemble1](./img/lect7/ensemble1.PNG)
+![ensemble1](./img/lect 7/ensemble1.PNG)
 
 ```
 학습 도중 중간 모델들을 저장(snapshot)하고 앙상블로 사용.
@@ -246,7 +247,7 @@ Learning rate를 엄청 낮췄다고 엄청 높혔다가를 반복하면서 손�
 
 - Smooth Ensemble: Polyak averaging
 
-![ensemble2](./img/lect7/ensemble2.PNG)
+![ensemble2](./img/lect 7/ensemble2.PNG)
 
 ```
 Polyak averaging.
@@ -266,7 +267,7 @@ Polyak averaging.
 Regularization: 모델이 트레이닝셋에 fit하는 것을 막아줌 ... 일반화하여 unseen 데이터에 보다 잘 동작함.
 ```
 
-![regularization1](./img/lect7/regularization2.PNG)
+![regularization1](./img/lect 7/regularization2.PNG)
 
 ```
 손실함수: 기존항 + Regularization term.
@@ -277,7 +278,7 @@ Regularization: 모델이 트레이닝셋에 fit하는 것을 막아줌 ... 일�
 
 ### Dropout
 
-![regularization2](./img/lect7/regularization2.PNG)
+![regularization2](./img/lect 7/regularization2.PNG)
 
 ```
 Dropout: forward pass 과정에서 한 layer씩 임의로 일부 뉴런을 0으로 만듬.
@@ -293,7 +294,7 @@ FC layer에서 흔히 사용됨.
 ... 또, Conv layer에는 여러 체널이 있기에 일부 체널을 자체를 dropout할 수도 있음.
 ```
 
-![regularization3](./img/lect7/regularization3.PNG)
+![regularization3](./img/lect 7/regularization3.PNG)
 
 ```
 일부 값을 0으로 만들며 Training time의 네트워크를 심각하게 훼손하는 Dropout이 어떻게 성능을 향상시킬까?
@@ -307,7 +308,7 @@ FC layer에서 흔히 사용됨.
 ... 일부 데이터에 overfit하는 것을 방지하는 효과.
 ```
 
-![regularization4](./img/lect7/regularization4.PNG)
+![regularization4](./img/lect 7/regularization4.PNG)
 
 ```
 Dropout 효과에 대한 새로운 해석: 단일 모델로 앙상블 효과.
@@ -320,7 +321,7 @@ Dropout 효과에 대한 새로운 해석: 단일 모델로 앙상블 효과.
 ... Dropout은 아주 거대한 앙상블 모델을 동시에 학습시키는 것.
 ```
 
-![regularization5](./img/lect7/regularization5.PNG)
+![regularization5](./img/lect 7/regularization5.PNG)
 
 ```
 Test time의 Dropout
@@ -336,7 +337,7 @@ Dropout을 사용하면 기본적으로 NN의 동작 자체가 변함.
 ... 하지만 이 또한 Test time에 randomness를 만들어 내기 때문에 좋지 않은 방법.
 ```
 
-![regularization6](./img/lect7/regularization6.PNG)
+![regularization6](./img/lect 7/regularization6.PNG)
 
 ```
 위의 네트워크의 Test time에서 a = W_1*x + W_2*y.
@@ -346,7 +347,7 @@ Dropout을 사용하면 기본적으로 NN의 동작 자체가 변함.
 ... Test time에서 stochasticity를 사용하지 않고 할 수 있는 값 싼 방법: Dropout probability를 네트워크 출력에 곱해줌.
 ```
 
-![regularization7](./img/lect7/regularization7.PNG)
+![regularization7](./img/lect 7/regularization7.PNG)
 
 ```
 실제 구현에서는 최대한 Test time을 줄이기 위해 Train time에서 /p를 수행함.
@@ -356,7 +357,7 @@ Dropout을 사용하면 기본적으로 NN의 동작 자체가 변함.
 
 - 일반적인 Regularization 전략
 
-![regularization8](./img/lect7/regularization8.PNG)
+![regularization8](./img/lect 7/regularization8.PNG)
 
 ```
 일반적인 Regularization 전략.
@@ -374,7 +375,7 @@ BN: Dropout과 유사한 Regularization 성능.
 
 ### Data augmentation
 
-![regularization9](./img/lect7/regularization9.PNG)
+![regularization9](./img/lect 7/regularization9.PNG)
 
 ```
 Data augmentation: 어떤 문제에도 적용해 볼 수 있는 아주 일반적인 방법.
@@ -384,7 +385,7 @@ Data augmentation: 어떤 문제에도 적용해 볼 수 있는 아주 일반적
 
 ### 그외의 Regualrization
 
-![regularization10](./img/lect7/regularization10.PNG)
+![regularization10](./img/lect 7/regularization10.PNG)
 
 ```
 Dropout, Batch Normalization, Data Augmentation.
@@ -422,8 +423,9 @@ Overfitting이 발생하는 주된 원인 중 하나가 작은 트레이닝셋�
 'CNN 학습에 엄청난 데이턱 필요하다.'는 미신을 무너뜨림.
 ```
 
-![transfer-learning1](./img/lect7/transfer-learning1.PNG)
-![transfer-learning2](./img/lect7/transfer-learning2.PNG)
+![transfer-learning1](./img/lect 7/transfer-learning1.PNG)
+
+![transfer-learning2](./img/lect 7/transfer-learning2.PNG)
 
 ```
 Transfer learning 시나리오.
@@ -432,7 +434,7 @@ Transfer learning 시나리오.
 ... 기존의 데이터와 다름: 좀 더 창의적, 경험적인 방법이 필요 ... 데이터셋이 크면: 더 많은 layer를 fine tunning하면서 완화할 수 있음.
 ```
 
-![transfer-learning3](./img/lect7/transfer-learning3.PNG)
+![transfer-learning3](./img/lect 7/transfer-learning3.PNG)
 
 ```
 요즘 거의 모든 Computer vision 관련 응용 알고리즘들이 모델들을 밑바닥부터(from scratch) 학습시키지 않음.
@@ -440,7 +442,7 @@ Transfer learning 시나리오.
 ... captioning의 경우 word vectors를 pretrain하기도 함.
 ```
 
-![transfer-learning4](./img/lect7/transfer-learning4.PNG)
+![transfer-learning4](./img/lect 7/transfer-learning4.PNG)
 
 ```
 문제에 대한 데이터셋이 크지 않은 경우,
@@ -453,4 +455,4 @@ Transfer learning 시나리오.
 
 ## Summary
 
-![summary](./img/lect7/summary.PNG)
+![summary](./img/lect 7/summary.PNG)

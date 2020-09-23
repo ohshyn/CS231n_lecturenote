@@ -13,11 +13,11 @@
 ...
 ```
 
-![mini-batch-SGD](./img/lect6/mini-batch-SGD.PNG)
+![mini-batch-SGD](./img/lect 6/mini-batch-SGD.PNG)
 
 ## Overview Training Neural Networks
 
-![overview](./img/lect6/overview.PNG)
+![overview](./img/lect 6/overview.PNG)
 
 ```
 1. NN 학습을 시작하기 앞서 필요한 기본 설정?
@@ -36,7 +36,7 @@
 
 ## Part 1
 
-![part1](./img/lect6/part1.PNG)
+![part1](./img/lect 6/part1.PNG)
 
 ### Activation Functions
 
@@ -46,7 +46,7 @@
 
 - Sigmoid
 
-![sigmoid](./img/lect6/sigmoid.PNG)
+![sigmoid](./img/lect 6/sigmoid.PNG)
 
 ```
 Sigmoid의 역할: 입력을 받아 [0, 1] 사이의 값으로 만듦.
@@ -57,7 +57,7 @@ Sigmoid의 역할: 입력을 받아 [0, 1] 사이의 값으로 만듦.
 ... 뉴런의 Firing rate를 saturation 시키는 것으로 해석가능.
 ```
 
-![sigmoid-problem1](./img/lect6/sigmoid-problem1.PNG)
+![sigmoid-problem1](./img/lect 6/sigmoid-problem1.PNG)
 
 ```
 Sigmoid의 문제점 1. Saturation된 뉴런은 gradient를 없앤다.
@@ -66,7 +66,7 @@ Sigmoid의 문제점 1. Saturation된 뉴런은 gradient를 없앤다.
 ... x = 10일때 sigmoid는 flat, gradient = 0 ... 밑으로 0이 계속 전달됨.
 ```
 
-![sigmoid-problem2](./img/lect6/sigmoid-problem2.PNG)
+![sigmoid-problem2](./img/lect 6/sigmoid-problem2.PNG)
 
 ```
 Sigmoid의 문제점 2. sigmoid의 출력이 zero-centered 하지 않다.
@@ -87,7 +87,7 @@ Sigmoid의 문제점 3. exp연산량이 크다.
 
 - Tanh
 
-![tanh](./img/lect6/tanh.PNG)
+![tanh](./img/lect 6/tanh.PNG)
 
 ```
 Sigmoid와 유사. 하지만 범위가 [-1, 1].
@@ -98,7 +98,7 @@ Sigmoid와 유사. 하지만 범위가 [-1, 1].
 
 - ReLU
 
-![relu](./img/lect6/relu.PNG)
+![relu](./img/lect 6/relu.PNG)
 
 ```
 ReLU의 역할: element-wise 연산을 수행하며 음수면 0, 양수면 그대로 출력.
@@ -121,7 +121,7 @@ ReLU의 문제점.
 - 음의 입력에 대해서는 Saturation ... dead ReLU 발생.
 ```
 
-![dead-relu](./img/lect6/dead-relu.PNG)
+![dead-relu](./img/lect 6/dead-relu.PNG)
 
 ```
 Dead ReLU: 평면의 절반만 activate됨.
@@ -141,7 +141,7 @@ Dead ReLU: 평면의 절반만 activate됨.
 
 - Leaky ReLU
 
-![leaky-relu](./img/lect6/leaky-relu.PNG)
+![leaky-relu](./img/lect 6/leaky-relu.PNG)
 
 ```
 ReLU의 단점 개선1: Leaky ReLU, PReLU.
@@ -154,7 +154,7 @@ PReLU: Negative space의 기울기를 학습하는 Leaky ReLU.
 
 - ELU
 
-![elu](./img/lect6/elu.PNG)
+![elu](./img/lect 6/elu.PNG)
 
 ```
 ELU
@@ -168,7 +168,7 @@ ReLU + Leaky ReLU
 
 - Maxout ''Neuron''
 
-![maxout](./img/lect6/maxout.PNG)
+![maxout](./img/lect 6/maxout.PNG)
 
 ```
 ReLU와 Leaky ReLU의 좀 더 일반화된 형태.
@@ -180,7 +180,7 @@ ReLU와 Leaky ReLU의 좀 더 일반화된 형태.
 
 - 활성화함수 정리.
 
-![tldr-af](./img/lect6/tldr-af.PNG)
+![tldr-af](./img/lect 6/tldr-af.PNG)
 
 ```
 ReLU가 가장 일반적.
@@ -189,7 +189,7 @@ LU계열 중 실험적으로 사용.
 
 ### Data Preprocessing
 
-![data-preprocessing1](./img/lect6/data-preprocessing1.PNG)
+![data-preprocessing1](./img/lect 6/data-preprocessing1.PNG)
 
 ```
 가장 대표적인 전처리 과정.
@@ -209,11 +209,11 @@ normalize(표준편차): 모든 차원의 영향력을 동일하게 설정.
 ... 전처리된 데이터는 오직 첫번째 layer의 입력일 뿐임.
 ```
 
-![tldr-dp](./img/lect6/tldr-dp.PNG)
+![tldr-dp](./img/lect 6/tldr-dp.PNG)
 
 ### Weight Initialization
 
-![weight-init-q](./img/lect6/weight-init-q.PNG)
+![weight-init-q](./img/lect 6/weight-init-q.PNG)
 
 ```
 Q. W = 0으로 세팅한다면 어떻게 될까?
@@ -227,7 +227,7 @@ W를 모두 같게 설정하면 Symmetry breaking이 발생할 수 없다.
 
 - 초기화 문제 해결방법 1. 임의의 작은 값으로 초기화
 
-![weight-init1](./img/lect6/weight-init1.PNG)
+![weight-init1](./img/lect 6/weight-init1.PNG)
 
 ```
 네트워크가 작을 경우 충분히 Symmetry breaking.
@@ -236,11 +236,11 @@ W를 모두 같게 설정하면 Symmetry breaking이 발생할 수 없다.
 ... backward pass: W가 계속 곱해져 gradient값이 작아지다가 0으로 수렴.
 ```
 
-![weight-init2](./img/lect6/weight-init2.PNG)
+![weight-init2](./img/lect 6/weight-init2.PNG)
 
 - 초기화 문제 해결방법 2. 임의의 큰 값으로 초기화
 
-![weight-init3](./img/lect6/weight-init3.PNG)
+![weight-init3](./img/lect 6/weight-init3.PNG)
 
 ```
 활성화함수(tanh)의 입력이 커지면서 Saturation.
@@ -249,7 +249,7 @@ W를 모두 같게 설정하면 Symmetry breaking이 발생할 수 없다.
 
 - 초기화 문제 해결방법 3. Xavier initialization
 
-![weight-init4](./img/lect6/weight-init4.PNG)
+![weight-init4](./img/lect 6/weight-init4.PNG)
 
 ```
 W: Standard gaussian으로 뽑은 값을 입력의 수로 스케일링.
@@ -265,17 +265,17 @@ W: Standard gaussian으로 뽑은 값을 입력의 수로 스케일링.
 ... 결국 0으로 수렴하면서 비활성화됨.
 ```
 
-![weight-init5](./img/lect6/weight-init5.PNG)
+![weight-init5](./img/lect 6/weight-init5.PNG)
 
 ```
 해결법: 입력이 반토막 남을 고려하여 fan_in에 /2를 해줌.
 ```
 
-![weight-init6](./img/lect6/weight-init6.PNG)
+![weight-init6](./img/lect 6/weight-init6.PNG)
 
 - Weight Initialization 정리
 
-![weight-init7](./img/lect6/weight-init7.PNG)
+![weight-init7](./img/lect 6/weight-init7.PNG)
 
 ```
 Weight Initialization: 연구가 활발한 분야.
@@ -285,7 +285,7 @@ W의 초기화는 Xavier initailization으로 시작해서 다른 방법들을 �
 
 ### Batch Normalization
 
-![batch-norm1](./img/lect6/batch-norm1.PNG)
+![batch-norm1](./img/lect 6/batch-norm1.PNG)
 
 ```
 gaussizan의 범위로 activation을 유지시키는 또 다른 아이디어.
@@ -299,7 +299,7 @@ Batch norm의 함수는 미분 가능한 함수.
 ... 따라서 Backprop이 가능하다. 
 ```
 
-![batch-norm2](./img/lect6/batch-norm2.PNG)
+![batch-norm2](./img/lect 6/batch-norm2.PNG)
 
 ```
 Batch X에 N개의 학습 데이터가 있고, 각 데이터가 D차원일때.
@@ -307,7 +307,7 @@ Batch X에 N개의 학습 데이터가 있고, 각 데이터가 D차원일때.
 2. 그리고 Batch X를 element-wise로 Normalize.
 ```
 
-![batch-norm3](./img/lect6/batch-norm3.PNG)
+![batch-norm3](./img/lect 6/batch-norm3.PNG)
 
 ```
 Batch Norm은 FC나 Conv layer 직후에 넣어줌.
@@ -319,7 +319,7 @@ Conv layer에서의 차이점.
 ... Conv는 특성상 같은 방식으로 Normalize 시켜야 하기 때문에 Activation map(체널, depth)마다 평균과 분산을 하나만 구함.
 ```
 
-![batch-norm4](./img/lect6/batch-norm4.PNG)
+![batch-norm4](./img/lect 6/batch-norm4.PNG)
 
 ```
 BN의 Scaling 연산: Normalized 된 값들을 원상복구하는 방법 ... Saturation의 정도를 조정하기 위함.
@@ -330,8 +330,9 @@ BN의 Scaling 연산: Normalized 된 값들을 원상복구하는 방법 ... Sat
 
 - Batch Normalization 정리
 
-![batch-norm5](./img/lect6/batch-norm5.PNG)
-![batch-norm6](./img/lect6/batch-norm6.PNG)
+![batch-norm5](./img/lect 6/batch-norm5.PNG)
+
+![batch-norm6](./img/lect 6/batch-norm6.PNG)
 
 ```
 입력이 있고, 모든 미니베치 마다 각각 평균과 분산을 계산.
