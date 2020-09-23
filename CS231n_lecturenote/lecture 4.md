@@ -2,7 +2,7 @@
 
 ## 1. Backpropagation
 
-![gradient-descent](./img/lect 4/gradient-descent.PNG)
+![gradient-descent](./img/lect4/gradient-descent.PNG)
 
 ```
 컴퓨터에서 활용하는 Analytic gradient는 어떻게 계산될까?
@@ -13,7 +13,7 @@ Analytic gradient
 
 - Computational graph
 
-![computational-graph](./img/lect 4/computational-graph.PNG)
+![computational-graph](./img/lect4/computational-graph.PNG)
 
 ```
 임의의 함수를 표현하는 그래프.
@@ -31,7 +31,7 @@ Gradient를 얻기위해 Computational graph 내부의 모든 변수에 대해 c
 
 - Backpropagation: a simple example
 
-![chain-rule](./img/lect 4/chain-rule.PNG)
+![chain-rule](./img/lect4/chain-rule.PNG)
 
 ```
 목표: 함수를 만드는 것
@@ -47,11 +47,11 @@ Gradient를 얻기위해 Computational graph 내부의 모든 변수에 대해 c
 ... Analytic gradient: 복잡한 미분을 Chain rule을 통하 간단한 미분으로 바꾸어 푸는 것.
 ```
 
-![back-propagation](./img/lect 4/back-propagation.PNG)
+![back-propagation](./img/lect4/back-propagation.PNG)
 
 인풋의 형태가 Scalar가 아닌 Vector라면?
 
-![vectorized-input](./img/lect 4/vecotrized-input.PNG)
+![vectorized-input](./img/lect4/vecotrized-input.PNG)
 
 ```
 결국에는 input의 각 element가 output에 얼마나 영향을 주는지(gradient)를 계산하게됨.
@@ -61,7 +61,7 @@ Gradient를 얻기위해 Computational graph 내부의 모든 변수에 대해 c
 
 Backpropagation의 직관적인 이해를 돕는 질문들
 
-![back-propagation-patterns](./img/lect 4/back-propagation-patterns.PNG)
+![back-propagation-patterns](./img/lect4/back-propagation-patterns.PNG)
 
 - Q1. add 게이트의 역할?
 
@@ -103,7 +103,7 @@ API들은 computational graph를 구현하기위해 forward() / backward() 함�
 즉, 함수의 집합.
 ```
 
-![nn](./img/lect 4/nn.PNG)
+![nn](./img/lect4/nn.PNG)
 
 ```
 다중레이어를 쌓는다면 파라미터의 갯수가 증가하고 각 클래스의 템플릿이 증가한다.
@@ -116,16 +116,17 @@ W2는 h(사물 이미지에 대한 스코어)와 연결되어 있기에 예측�
 ... 3-레이어부터 심층 신경망이라는 용어를 사용한다.
 ```
 
-![dnn](./img/lect 4/dnn.PNG)
+![dnn](./img/lect4/dnn.PNG)
 
 - NN의 생물학적 영감
 
-![neurons](./img/lect 4/neurons.PNG)
-![activation-functions](./img/lect 4/activation-functions.PNG)
+![neurons](./img/lect4/neurons.PNG)
+
+![activation-functions](./img/lect4/activation-functions.PNG)
 
 ```
 자극을 전달하는 형태를 activation function(비선형 함수)를 통해 표현.
 그리고 그중 ReLU가 실제 뉴런과 가장 유사한 형태로 동작함.
 ```
 
-![dnn-example](./img/lect 4/dnn-example.PNG)
+![dnn-example](./img/lect4/dnn-example.PNG)

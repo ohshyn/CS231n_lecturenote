@@ -1,6 +1,6 @@
 ﻿# lecture 5. Convolutional Neural Networks
 
-![cnn](./img/lect 5/cnn.PNG)
+![cnn](./img/lect5/cnn.PNG)
 
 ```
 CNN: 기존의 NN과 같은 부류이지만 Convolutional layer를 통해 공간적 정보를 계산하는 NN.
@@ -10,7 +10,7 @@ CNN: 기존의 NN과 같은 부류이지만 Convolutional layer를 통해 공간
 
 - Fully Connected layer
 
-![fcl1](./img/lect 5/fcl1.PNG)
+![fcl1](./img/lect5/fcl1.PNG)
 
 ```
 FC layer는 W(파라미터)를 가지고 내적 연산을 수행.
@@ -20,9 +20,9 @@ FC layer는 W(파라미터)를 가지고 내적 연산을 수행.
 
 - Convolutional layer
 
-![cl1](./img/lect 5/cl1.PNG)
+![cl1](./img/lect5/cl1.PNG)
 
-![cl2](./img/lect 5/cl2.PNG)
+![cl2](./img/lect5/cl2.PNG)
 
 ```
 Convolutional layer의 FC layer와의 주된 차이점은 입력의 구조를 보존한다는 것.
@@ -36,7 +36,7 @@ Convolutional layer의 FC layer와의 주된 차이점은 입력의 구조를 �
 ... 실제 컴퓨터 연산에서는 결국 벡터화 시켜서 벡터연산을 수행, 보다 빠른 연산속도를 추구.
 ```
 
-![cl3](./img/lect 5/cl3.PNG)
+![cl3](./img/lect5/cl3.PNG)
 
 ```
 filter의 모든 요소를 가지고 내적을 수행하면 scalar값을 얻는다.
@@ -49,7 +49,7 @@ filter의 모든 요소를 가지고 내적을 수행하면 scalar값을 얻는�
 ... 가령 5*5*3의 filter가 6개 있다면 아래와 같이 총 6개의 activation map을 얻을 수 있고, 각각은 이미지의 다른 특징에 대한 정보를 저장.
 ```
 
-![cl4](./img/lect 5/cl4.PNG)
+![cl4](./img/lect5/cl4.PNG)
 
 - CNN의 활용
 
@@ -61,7 +61,7 @@ filter의 모든 요소를 가지고 내적을 수행하면 scalar값을 얻는�
 ... 가끔은 pooling layer도 들어감.
 ```
 
-![cl5](./img/lect 5/cl5.PNG)
+![cl5](./img/lect5/cl5.PNG)
 
 - filter(파라미터)의 계층적 학습
 
@@ -75,11 +75,11 @@ filter의 모든 요소를 가지고 내적을 수행하면 scalar값을 얻는�
 ... 이미지가 뉴런과 비슷하게 생겼다면 출력 값은 큰 값을 가지게 됨.
 ```
 
-![cl6](./img/lect 5/cl6.PNG)
+![cl6](./img/lect5/cl6.PNG)
 
 - CNN의 전체 구조
 
-![cnn-preview](./img/lect 5/cnn-preview.PNG)
+![cnn-preview](./img/lect5/cnn-preview.PNG)
 
 ```
 입력 이미지는 여러 layer를 통과하게 됨.
@@ -96,7 +96,7 @@ CNN의 끝단에는 FC layer가 있음.
 
 - Spatial dimensions
 
-![spatial-dimensions1](./img/lect 5/spatial-dimensions1.PNG)
+![spatial-dimensions1](./img/lect5/spatial-dimensions1.PNG)
 
 ```
 어떻게 32*32*3의 입력에서 28*28*1의 출력이 됐는가?
@@ -106,7 +106,7 @@ CNN의 끝단에는 FC layer가 있음.
 ... 이를 이용해 fiter 크기와 stride 크기를 정할 수 있음.
 ```
 
-![spatial-dimensions2](./img/lect 5/spatial-dimensions2.PNG)
+![spatial-dimensions2](./img/lect5/spatial-dimensions2.PNG)
 
 ```
 Padding: 원하는 사이즈의 출력을 만들기 위해 입력의 가장자리를 늘려 값을 채움.
@@ -115,7 +115,7 @@ Padding: 원하는 사이즈의 출력을 만들기 위해 입력의 가장자�
 ... padding을 P로 둘 때, 출력의 사이즈는 (N + 2*P - F)/S + 1.
 ```
 
-![spatial-dimensions3](./img/lect 5/spatial-dimensions3.PNG)
+![spatial-dimensions3](./img/lect5/spatial-dimensions3.PNG)
 
 ```
 filter와 stride를 정하는 일반적 방법.
@@ -125,7 +125,7 @@ filter와 stride를 정하는 일반적 방법.
 
 - Summary Conv layer
 
-![summary-cl](./img/lect 5/summary-cl.PNG)
+![summary-cl](./img/lect5/summary-cl.PNG)
 
 ```
 Conv layer를 사용하기 위해 선택해야 할 하이퍼 파라미터들.
@@ -142,7 +142,7 @@ Conv layer를 사용하기 위해 선택해야 할 하이퍼 파라미터들.
 
 - 1*1 convolution
 
-![1x1-convolution](./img/lect 5/1x1-convolution.PNG)
+![1x1-convolution](./img/lect5/1x1-convolution.PNG)
 
 ```
 depth 전체에 대한 내적을 구하는 것.
@@ -150,7 +150,7 @@ depth 전체에 대한 내적을 구하는 것.
 
 ## 2. Convolutional Neural Networks with the brain stuff
 
-![brain-view-of-cl](./img/lect 5/brain-view-of-cl.PNG)
+![brain-view-of-cl](./img/lect5/brain-view-of-cl.PNG)
 
 ```
 activation map의 각 값을 구하는 과정(FC layer)에서 뉴런과 동일한 동작을 수행.
@@ -167,7 +167,7 @@ activation map의 각 값을 구하는 과정(FC layer)에서 뉴런과 동일�
 
 - Pooling layer
 
-![pl](./img/lect 5/pl.PNG)
+![pl](./img/lect5/pl.PNG)
 
 ```
 Pooling layer: W(파라미터)를 더 작고 관리하기 쉽게함.
@@ -177,7 +177,7 @@ Pooling layer: W(파라미터)를 더 작고 관리하기 쉽게함.
 ... Max Pooling이 일반적으로 사용됨.
 ```
 
-![maxpool](./img/lect 5/maxpool.PNG)
+![maxpool](./img/lect5/maxpool.PNG)
 
 ```
 왜 Max pooling이 Avg pooling보다 좋은가?
@@ -189,7 +189,7 @@ Pooling과 Conv의 stride는 Downsampling이란 관점에서 매 한가지 아�
 ... stride가 보다 나은 성능을 보이고 있음.
 ```
 
-![summary-pl](./img/lect 5/summary-pl.PNG)
+![summary-pl](./img/lect5/summary-pl.PNG)
 
 ```
 Pooling layer를 사용하기 위해 선택해야 할 하이퍼 파라미터들.
@@ -207,7 +207,7 @@ Pooling은 Downsampling을 위한 연산.
 
 - Fully Connected layer(FC layer)
 
-![fcl2](./img/lect 5/fcl2.PNG)
+![fcl2](./img/lect5/fcl2.PNG)
 
 ```
 CNN의 마지막 layer.
@@ -225,7 +225,7 @@ CNN의 마지막 layer.
 
 # Summary
 
-![summary](./img/lect 5/summary.PNG)
+![summary](./img/lect5/summary.PNG)
 
 ```
 CNN 아키텍처 트렌드.

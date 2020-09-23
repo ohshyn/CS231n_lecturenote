@@ -15,7 +15,7 @@ Deep learning frameworks
 
 ## CPU vs GPU
 
-![cpu-vs-gpu1](./img/lect 8/cpu-vs-gpu1.PNG)
+![cpu-vs-gpu1](./img/lect8/cpu-vs-gpu1.PNG)
 
 ```
 공통점.
@@ -34,7 +34,7 @@ CPU: 범용처리.
 GPU: 벙렬처리 ... 행렬곱 연산 수행에 아주 적합.
 ```
 
-![cpu-vs-gpu2](./img/lect 8/cpu-vs-gpu2.PNG)
+![cpu-vs-gpu2](./img/lect8/cpu-vs-gpu2.PNG)
 
 ```
 행렬곱의 내적 연산은 서로 입력데이터만 다를 뿐 모두 서로 독립적.
@@ -46,7 +46,7 @@ massive한 병렬화 문제에서는 GPU의 처리량이 압도적.
 가령, 행렬의 크기가 엄청 큰 경우, Convolution의 경우 GPU의 연산속도가 우월하다.
 ```
 
-![cpu-vs-gpu3](./img/lect 8/cpu-vs-gpu3.PNG)
+![cpu-vs-gpu3](./img/lect8/cpu-vs-gpu3.PNG)
 
 ```
 CUDA: C-like, GPU에서 실행되는 코드.
@@ -59,7 +59,7 @@ OpenCL: GPU, CPU 모두에서 실행가능한 코드.
 
 ### CPU/GPU Communication
 
-![cpu-vs-gpu4](./img/lect 8/cpu-vs-gpu4.PNG)
+![cpu-vs-gpu4](./img/lect8/cpu-vs-gpu4.PNG)
 
 ```
 GPU는 forward/backward가 아주 빠르지만, 디스크에서 데이터를 읽어드리는 것이 보틀넥.
@@ -80,7 +80,7 @@ GPU 보틀넥 해결책 3: 데이터 -(pre-fetching)-> CPU -(buffer)-> GPU
 
 ## Deep Learning Frameworks
 
-![frameworks1](./img/lect 8/frameworks1.PNG)
+![frameworks1](./img/lect8/frameworks1.PNG)
 
 ```
 최근 몇 년간 흥미로운 변화: academia에서 industry로의 이동.
@@ -116,7 +116,7 @@ Module: NN layer ... state, 가중치 저장 가능.
 
 #### PyTorch: Tensor = Numpy + GPU
 
-![pytorch1](./img/lect 8/pytorch1.PNG)
+![pytorch1](./img/lect8/pytorch1.PNG)
 
 ```
 PyTorch tensor는 Numpy array와 매우 유사, 실제로는 Numpy array를 사용하지 않고 PyTorch tesnor를 이용.
@@ -124,32 +124,32 @@ PyTorch tensor는 Numpy array와 매우 유사, 실제로는 Numpy array를 사�
 다만, PyTorch tensor는 GPU에서도 돌아감.
 ```
 
-![pytorch2](./img/lect 8/pytorch2.PNG)
+![pytorch2](./img/lect8/pytorch2.PNG)
 
 ```
 GPU에서 실행시키려면 data type만 조금 변경해주면 됨.
 ... FloatTensor 대신 cuda.FloatTensor 
 ```
 
-![pytorch3](./img/lect 8/pytorch3.PNG)
+![pytorch3](./img/lect8/pytorch3.PNG)
 
 ```
 Tensor 선언 및 초기화.
 ```
 
-![pytorch4](./img/lect 8/pytorch4.PNG)
+![pytorch4](./img/lect8/pytorch4.PNG)
 
 ```
 Forward pass: prediction 및 loss 계산.
 ```
 
-![pytorch5](./img/lect 8/pytorch5.PNG)
+![pytorch5](./img/lect8/pytorch5.PNG)
 
 ```
 Backward pass: gradient 손수 계산.
 ```
 
-![pytorch6](./img/lect 8/pytorch6.PNG)
+![pytorch6](./img/lect8/pytorch6.PNG)
 
 ```
 Gradient descent: W 업데이트
@@ -157,7 +157,7 @@ Gradient descent: W 업데이트
 
 #### PyTorch: Autograd
 
-![pytorch7](./img/lect 8/pytorch7.PNG)
+![pytorch7](./img/lect8/pytorch7.PNG)
 
 ```
 Variable: Computational graphs를 만들고 이를 통해 gradient를 자동으로 계산하는 목적.
@@ -166,26 +166,26 @@ Variable: Computational graphs를 만들고 이를 통해 gradient를 자동으�
 ... 연산자를 수행하는 것이 아니라 Computational graph를 만들게 됨.
 ```
 
-![pytorch8](./img/lect 8/pytorch8.PNG)
+![pytorch8](./img/lect8/pytorch8.PNG)
 
 ```
 Variables 선언 시 해당 변수에 대한 gradient 계산 여부 지정.
 ```
 
-![pytorch9](./img/lect 8/pytorch9.PNG)
+![pytorch9](./img/lect8/pytorch9.PNG)
 
 ```
 Forward pass: Tensor 사용 시와 같은 코드 ... 같은 API.
 ... 예측값(y_pred)와 손실(loss) 계산 시 이런 imperative한 방법을 사용.
 ```
 
-![pytorch10](./img/lect 8/pytorch10.PNG)
+![pytorch10](./img/lect8/pytorch10.PNG)
 
 ```
 Backward pass: loss.backwards를 호출하면 gradient가 알아서 반환.
 ```
 
-![pytorch11](./img/lect 8/pytorch11.PNG)
+![pytorch11](./img/lect8/pytorch11.PNG)
 
 ```
 Gradient descent: Variable.grad.data의 값을 이용하여 가중치 업데이트.
@@ -203,7 +203,7 @@ Tensorflow와 PyTorch의 차이점.
 ... PyTorch의 코드가 좀 더 깔끔해 보임.
 ```
 
-![pytorch12](./img/lect 8/pytorch12.PNG)
+![pytorch12](./img/lect8/pytorch12.PNG)
 
 ```
 PyTorch의 사용자 정의 AutoGrad 함수.
@@ -212,33 +212,33 @@ PyTorch의 사용자 정의 AutoGrad 함수.
 
 #### PyTorch: nn
 
-![pytorch13](./img/lect 8/pytorch13.PNG)
+![pytorch13](./img/lect8/pytorch13.PNG)
 
 ```
 PyToch.nn: Tensorflow의 Keras, TF.Learn과 같은 higher level API의 역할.
 ... high level wrappers 제공.
 ```
 
-![pytorch14](./img/lect 8/pytorch14.PNG)
+![pytorch14](./img/lect8/pytorch14.PNG)
 
 ```
 Linear/ReLU layer를 model sequence에 추가하는 부분은 Keras와 유사.
 바로 밑에 nn package에서 제공하는 손실함수를 정의.
 ```
 
-![pytorch15](./img/lect 8/pytorch15.PNG)
+![pytorch15](./img/lect8/pytorch15.PNG)
 
 ```
 Forward pass: 매 반복마다 forward pass를 수행하여 prediction 결과를 도출하고 손실함수를 실행하여 loss도 도출.
 ```
 
-![pytorch16](./img/lect 8/pytorch16.PNG)
+![pytorch16](./img/lect8/pytorch16.PNG)
 
 ```
 Backward pass: loss.backward를 호출하면 매 반복마다 gradient가 저절로 계산됨.
 ```
 
-![pytorch17](./img/lect 8/pytorch17.PNG)
+![pytorch17](./img/lect8/pytorch17.PNG)
 
 ```
 Gradient descent: 가중치 업데이트.
@@ -246,7 +246,7 @@ Gradient descent: 가중치 업데이트.
 
 ##### PyTorch: optim
 
-![pytorch18](./img/lect 8/pytorch18.PNG)
+![pytorch18](./img/lect8/pytorch18.PNG)
 
 ```
 Tensorflow와 같이 PyTorch도 optimizer operations를 제공.
@@ -255,7 +255,7 @@ Tensorflow와 같이 PyTorch도 optimizer operations를 제공.
 ... optimizer 객체를 구성하는 것은 모델에게 파라미터를 optimize하겠다고 선언하는 것.
 ```
 
-![pytorch19](./img/lect 8/pytorch19.PNG)
+![pytorch19](./img/lect8/pytorch19.PNG)
 
 ```
 gradient 계산 후 optimizer.step을 호출하면 모델 파라미터가 업데이트.
@@ -263,7 +263,7 @@ gradient 계산 후 optimizer.step을 호출하면 모델 파라미터가 업데
 
 ##### PyTorch: nn, 나만의 module 정의
 
-![pytorch20](./img/lect 8/pytorch20.PNG)
+![pytorch20](./img/lect8/pytorch20.PNG)
 
 ```
 PyTorch 사용시 가장 많이 할 부분: 자신만의 nn.module 정의.
@@ -276,7 +276,7 @@ PyTorch로 학습하는 가장 일반적인 패턴.
 ... 모델을 구성하는 클래스를 정의하고 반복문을 돌면서 모델을 업데이트하는 것.
 ```
 
-![pytorch21](./img/lect 8/pytorch21.PNG)
+![pytorch21](./img/lect8/pytorch21.PNG)
 
 ```
 생성자.
@@ -288,7 +288,7 @@ forward.
 ... 입력 x를 받아 linear1을 지나고 linear2를 지나서 결과값을 출력.
 ```
 
-![pytorch22](./img/lect 8/pytorch22.PNG)
+![pytorch22](./img/lect8/pytorch22.PNG)
 
 ```
 optimizer를 정의.
@@ -300,7 +300,7 @@ optimizer를 정의.
 
 #### PyTorch: DataLoader
 
-![pytorch23](./img/lect 8/pytorch23.PNG)
+![pytorch23](./img/lect8/pytorch23.PNG)
 
 ```
 미니배치를 관리하는 PyTorch의 아주 유용한 기능.
@@ -312,19 +312,19 @@ Dataloader는 dataset을 wrapping하는 일종의 추상화 객체를 제공.
 내부적으로 Data shuffling, multithreaded, dataloading을 알아서 관리.
 ```
 
-![pytorch24](./img/lect 8/pytorch24.PNG)
+![pytorch24](./img/lect8/pytorch24.PNG)
 
 #### PyTorch: Pretrained Models
 
-![pytorch25](./img/lect 8/pytorch25.PNG)
+![pytorch25](./img/lect8/pytorch25.PNG)
 
 #### PyTorch: Visdom
 
-![pytorch26](./img/lect 8/pytorch26.PNG)
+![pytorch26](./img/lect8/pytorch26.PNG)
 
 ### Static Computational Graphs vs Dynamic Computational Graphs
 
-![static-vs-dynamic1](./img/lect 8/static-vs-dynamic1.PNG)
+![static-vs-dynamic1](./img/lect8/static-vs-dynamic1.PNG)
 
 ```
 PyTorch와 Tensorflow의 주된 차이점.
@@ -341,7 +341,7 @@ PyTorch:
 
 ##### Optimization
 
-![static-vs-dynamic2](./img/lect 8/static-vs-dynamic2.PNG)
+![static-vs-dynamic2](./img/lect8/static-vs-dynamic2.PNG)
 
 ```
 Static Computational Graph: Optimization에 용이.
@@ -354,7 +354,7 @@ Dynamic Computational Graph는 그래프 최적화를 다루기 어려움.
 
 ##### Serialization
 
-![static-vs-dynamic3](./img/lect 8/static-vs-dynamic3.PNG)
+![static-vs-dynamic3](./img/lect8/static-vs-dynamic3.PNG)
 
 ```
 ㅍ: Serialization에 용이.
@@ -367,7 +367,7 @@ Dynamic Computational Graph: 그래프 구성과 실행 과정이 얽혀(interle
 
 ##### Conditional
 
-![static-vs-dynamic4](./img/lect 8/static-vs-dynamic4.PNG)
+![static-vs-dynamic4](./img/lect8/static-vs-dynamic4.PNG)
 
 ```
 Dynamic Computational Graph: 깔끔한 코드 작성.
@@ -380,4 +380,4 @@ Dynamic Computational Graph: 가능한 모든 control flow를 고려해서 Compu
 
 ##### Dynamic Computational Graph: Application
 
-![static-vs-dynamic5](./img/lect 8/static-vs-dynamic5.PNG)
+![static-vs-dynamic5](./img/lect8/static-vs-dynamic5.PNG)
