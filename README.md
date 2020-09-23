@@ -19,3 +19,4 @@
 - lecture 7. Training Neural Networks 2
 ---
 ## 2020.09.23
+- lecture 8. Deep Learning Software
