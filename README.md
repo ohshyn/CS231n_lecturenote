@@ -20,3 +20,6 @@
 ---
 ## 2020.09.23
 - lecture 8. Deep Learning Software
+---
+## 2020.09.28~29
+- lecture 9. CNN Architectures
